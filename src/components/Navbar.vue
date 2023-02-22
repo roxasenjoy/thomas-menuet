@@ -1,7 +1,35 @@
 <script lang="ts">
 export default {
 
+    created () {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    unmounted () {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
+
+    mounted(){
+        document.querySelector("nav")?.classList.remove("displayNav");
+    },
+
     methods: {
+
+        handleScroll (event: any) {
+            window.addEventListener("scroll", function() {
+                
+                var scroll = window.pageYOffset;
+                var objectSelect: any = document.querySelector("#section3"); // Section à atteindre pour afficher le menu
+
+                // La méthode .offsetTop permet de récupérer la position actuelle d'un élément par rapport au document
+                var objectPosition = objectSelect?.offsetTop;
+
+                if (scroll > objectPosition) {
+                    document.querySelector("nav")?.classList.add("displayNav");
+                } else {
+                    document.querySelector("nav")?.classList.remove("displayNav");
+                }
+            });
+        },
 
         displayMenu() {
 
@@ -55,6 +83,12 @@ body{
     overflow-x: hidden;
 }
 
+.displayNav{
+    top: 0px;
+	transition: 0.5s;
+    opacity: 1;
+}
+
 nav{
     height: 4.5rem;
     width: 100vw;
@@ -64,7 +98,13 @@ nav{
     position: fixed;
     z-index: 10;
     justify-content:center;
+
+    /* Animation */
+    top: -4.5rem;
+	transition: 0.5s;
+    opacity: 0;
 }
+
 
 /*Styling Links*/
 .nav-links{
@@ -123,6 +163,7 @@ nav{
 .hamburger{
     display: none;
 }
+
 
 /*Stying for small screens*/
 @media screen and (max-width: 900px){
