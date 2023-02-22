@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("./fonts/Montserrat/Montserrat-Regular.ttf");
+  }
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("./fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Italic";
+    src: url("./fonts/Montserrat/Montserrat-Italic.ttf");
+  }
+
+@font-face {
+  font-family: "NYCD-Regular";
+  src: url("./fonts/Nothing-You-Could-Do/NothingYouCouldDo-Regular.ttf");
+}
+
+:root{
+	--white: #FFFCF9;
+	--gold: #D5A100;
+	--black: #1D1D1D;
+	--grey: #E0E0E0;
+
+	--ms-regular: 'Montserrat-Regular', sans-serif;
+	--ms-italic: 'Montserrat-Italic', sans-serif;
+	--ms-bold: 'Montserrat-Bold', sans-serif;
+	
+	--nycd: 'NYCD-Regular', sans-serif;
+}
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	font-weight: normal;
+}
