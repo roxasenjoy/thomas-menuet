@@ -18,7 +18,7 @@ export default {
             window.addEventListener("scroll", function() {
                 
                 var scroll = window.pageYOffset;
-                var objectSelect: any = document.querySelector("#section3"); // Section à atteindre pour afficher le menu
+                var objectSelect: any = document.querySelector(".sectionShowMenu"); // Section à atteindre pour afficher le menu
 
                 // La méthode .offsetTop permet de récupérer la position actuelle d'un élément par rapport au document
                 var objectPosition = objectSelect?.offsetTop;
@@ -27,6 +27,7 @@ export default {
                     document.querySelector("nav")?.classList.add("displayNav");
                 } else {
                     document.querySelector("nav")?.classList.remove("displayNav");
+                    
                 }
             });
         },
@@ -38,9 +39,20 @@ export default {
             const links = document.querySelectorAll(".nav-links li");
 
             navLinks?.classList.toggle("open");
-            links.forEach(link => {
-                link.classList.toggle("fade");
-            });
+
+            if(navLinks?.classList.contains('open')){
+                links.forEach(link => {
+                    link.classList.toggle("fade");
+                });
+            } else {
+                setTimeout(() => {
+                    links.forEach(link => {
+                        link.classList.toggle("fade");
+                    });
+                }, 500);
+            }
+            
+            
 
             //Hamburger Animation
             hamburger?.classList.toggle("toggle");
@@ -60,7 +72,19 @@ export default {
         </div>
         <ul class="nav-links">
             <li><a href="#">Accueil</a></li>
-            <li><a href="#">Projets archivés</a></li>
+            <li class="deroulant">
+                <p class="projectsArchived">Projets archivés &#9660;</p>
+                
+                <ul class="menu">
+                    <li><a href="#">IRMAR</a></li>
+                    <li><a href="#">RÉVÉRENCE</a></li>
+                    <li><a href="#">SABRE LASER</a></li>
+                    <li><a href="#">MARCHE DES BLESSÉS DE GUERRE</a></li>
+                    <li><a href="#">ESTAMPIE</a></li>
+                    <li><a href="#">ENDURANCE</a></li>
+                </ul>
+            
+            </li>
             <li><a href="#">Biographie</a></li>
             <li><a href="#">Commander</a></li> <!-- A changer avec un template -->
             <li><a></a></li>
@@ -106,6 +130,33 @@ nav{
 }
 
 
+
+.menu{
+    flex-flow: column wrap;
+    position: absolute; 
+    top: 50px;
+    left: 10px;
+    background-color: var(--black);
+    transition: all 1s ease-in-out;
+    
+    display: none;
+}
+
+.deroulant:hover .menu,
+.menu:hover{
+    display: flex !important;
+
+}
+
+.menu li{
+    padding: 10px 0;
+    white-space: nowrap;
+}
+
+.menu li a::after{
+    background-color: initial !important;
+}
+
 /*Styling Links*/
 .nav-links{
     display: flex;
@@ -114,18 +165,26 @@ nav{
     align-items: center;
     text-transform: uppercase;
 }
-.nav-links li a{
+
+.nav-links li {
+    position: relative;
+    list-style-type: none;
+    padding: 20px 0;
+}
+
+.nav-links li a,
+.projectsArchived{
     text-decoration: none;
     margin: 0 50px;
 }
 
-.nav-links li a:hover {
+.nav-links li a:hover,
+.projectsArchived:hover {
     color: var(--gold);
 }
-.nav-links li {
-    position: relative;
-}
-.nav-links li a::before {
+
+.nav-links li a::before,
+.projectsArchived::before {
     content: "";
     display: block;
     height: 1px;
@@ -137,7 +196,8 @@ nav{
     left: 0px;
 }
 
-.nav-links li a:after{
+.nav-links li a:after,
+.projectsArchived::after{
     content: "";
     display: block;
     height: 35px;
@@ -147,7 +207,8 @@ nav{
     left: -50px;
     top: -7.5px;
 }
-.nav-links li a:hover::before{
+.nav-links li a:hover::before,
+.projectsArchived:hover::before{
     width: 100%;
 }
 
@@ -171,6 +232,7 @@ nav{
         position: fixed;
         z-index: 3;
     }
+
     .hamburger{
         display:block;
         position: absolute;
@@ -179,17 +241,17 @@ nav{
         top: 50%;
         transform: translate(-5%, -50%);
         z-index: 2;
-        transition: all 0.7s ease;
+        transition: all 0.5s ease;
     }
     .nav-links{
         position: fixed;
-        background: #131418;
+        background: var(--black);
         height: 100vh;
         width: 100%;
         flex-direction: column;
         clip-path: circle(50px at 90% -20%);
         -webkit-clip-path: circle(50px at 90% -10%);
-        transition: all 1s ease-out;
+        transition: all 0.5s ease-out;
         pointer-events: none;
     }
     .nav-links.open{
@@ -198,7 +260,7 @@ nav{
         pointer-events: all;
     }
     .nav-links li{
-        opacity: 0;
+        opacity: 0; 
     }
     .nav-links li:nth-child(1){
         transition: all 0.5s ease 0.2s;
@@ -210,27 +272,48 @@ nav{
         transition: all 0.5s ease 0.6s;
     }
     .nav-links li:nth-child(4){
-        transition: all 0.5s ease 0.7s;
+        transition: all 0.5s ease 0.8s;
     }
     li.fade{
         opacity: 1;
         padding: 25px 0;
     }
 
-    .nav-links li.fade a{
+    .nav-links li.fade a,
+    .projectsArchived{
         text-decoration: none;
         margin: 0px;
         font-size: 26px;
-
     }
 
     /* Séparation des sections */
-    .nav-links li.fade a:after{
+    .nav-links li.fade a:after,
+    .projectsArchived:after{
         height: 0px;
     }
 
-    .nav-links li a::before {
+    .nav-links li a::before ,
+    .projectsArchived::before{
         margin-top: 35px;
+    }
+
+    .menu{
+        position: relative; 
+        background-color: transparent;
+        top: 10px;
+    }
+
+    .menu li.fade{
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    .nav-links .menu li.fade a{
+        font-size: 16px;
+        text-align: center;
+    }
+    .nav-links .menu li a::before{
+        margin-top: 22.5px;
     }
 }
 

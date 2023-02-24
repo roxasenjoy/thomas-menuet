@@ -7,9 +7,6 @@
 <template>
 
   <Navbar></Navbar>
-  <RouterView />
+  <RouterView/>
+
 </template>
-
-<style scoped>
-
-</style>

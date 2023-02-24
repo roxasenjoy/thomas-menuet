@@ -1,16 +1,29 @@
 <script setup lang="ts">
-
+    import Header from '@/components/Header.vue';
+    import Separation from '@/components/Separation.vue';
+    import Presentation from '@/components/Presentation.vue';
 </script>
 
 <template>
-   <section id='section2'>Section 2</section>
-    <section id='section3'>Section 3</section>
-    <section id='section4'>Section 4</section>
+    <Header></Header>
+    <Separation></Separation>
+    <Presentation></Presentation>
 </template>
 
 <style>
-    section {
-        min-height: 600px;
-    }
-    
+
+    /* Changement de la photo */
+    .sectionShowMenu {
+        background-image: 
+            linear-gradient(rgba(000, 000, 000, 0.6), rgba(000, 000, 000, 0.6)),
+            url("@/assets/img/IRMAR/IRMAR_3.jpg");
+    } 
+
+    .sectionPresentation {
+        background-image: 
+            linear-gradient(rgba(000, 000, 000, 0.6), rgba(000, 000, 000, 0.6)),
+            url("@/assets/img/IRMAR/presentation.jpg");
+    } 
+
+
 </style>
