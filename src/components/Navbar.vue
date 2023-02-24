@@ -1,65 +1,65 @@
 <script lang="ts">
-export default {
+    export default {
 
-    created () {
-        window.addEventListener('scroll', this.handleScroll);
-    },
-    unmounted () {
-        window.removeEventListener('scroll', this.handleScroll);
-    },
-
-    mounted(){
-        document.querySelector("nav")?.classList.remove("displayNav");
-    },
-
-    methods: {
-
-        handleScroll (event: any) {
-            window.addEventListener("scroll", function() {
-                
-                var scroll = window.pageYOffset;
-                var objectSelect: any = document.querySelector(".sectionShowMenu"); // Section à atteindre pour afficher le menu
-
-                // La méthode .offsetTop permet de récupérer la position actuelle d'un élément par rapport au document
-                var objectPosition = objectSelect?.offsetTop;
-
-                if (scroll > objectPosition) {
-                    document.querySelector("nav")?.classList.add("displayNav");
-                } else {
-                    document.querySelector("nav")?.classList.remove("displayNav");
-                    
-                }
-            });
+        created () {
+            window.addEventListener('scroll', this.handleScroll);
+        },
+        unmounted () {
+            window.removeEventListener('scroll', this.handleScroll);
         },
 
-        displayMenu() {
+        mounted(){
+            document.querySelector("nav")?.classList.remove("displayNav");
+        },
 
-            const hamburger = document.querySelector(".hamburger");
-            const navLinks = document.querySelector(".nav-links");
-            const links = document.querySelectorAll(".nav-links li");
+        methods: {
 
-            navLinks?.classList.toggle("open");
+            handleScroll (event: any) {
+                window.addEventListener("scroll", function() {
+                    
+                    var scroll = window.pageYOffset;
+                    var objectSelect: any = document.querySelector(".sectionShowMenu"); // Section à atteindre pour afficher le menu
 
-            if(navLinks?.classList.contains('open')){
-                links.forEach(link => {
-                    link.classList.toggle("fade");
+                    // La méthode .offsetTop permet de récupérer la position actuelle d'un élément par rapport au document
+                    var objectPosition = objectSelect?.offsetTop;
+
+                    if (scroll > objectPosition) {
+                        document.querySelector("nav")?.classList.add("displayNav");
+                    } else {
+                        document.querySelector("nav")?.classList.remove("displayNav");
+                        
+                    }
                 });
-            } else {
-                setTimeout(() => {
+            },
+
+            displayMenu() {
+
+                const hamburger = document.querySelector(".hamburger");
+                const navLinks = document.querySelector(".nav-links");
+                const links = document.querySelectorAll(".nav-links li");
+
+                navLinks?.classList.toggle("open");
+
+                if(navLinks?.classList.contains('open')){
                     links.forEach(link => {
                         link.classList.toggle("fade");
                     });
-                }, 500);
-            }
-            
-            
+                } else {
+                    setTimeout(() => {
+                        links.forEach(link => {
+                            link.classList.toggle("fade");
+                        });
+                    }, 500);
+                }
+                
+                
 
-            //Hamburger Animation
-            hamburger?.classList.toggle("toggle");
-        },
+                //Hamburger Animation
+                hamburger?.classList.toggle("toggle");
+            },
+        }
+
     }
-
-}
 </script>
 
 <template>
