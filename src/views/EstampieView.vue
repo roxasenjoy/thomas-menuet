@@ -121,12 +121,7 @@
 
     <Header></Header>
     <Separation></Separation>
-    
-    <Presentation>
-        <template v-slot:title>RÉSIDENCE DE L'IRMAR</template>
-        <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.</template>
-    </Presentation>
-
+    <Presentation></Presentation>
     <CarouselImage :images="images" :nbImages=nbImages></CarouselImage>
     <Product  :listElements="listElements" :details="details"></Product>
     <Audio :listAudios="listAudios"></Audio>

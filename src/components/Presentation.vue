@@ -8,9 +8,9 @@
 <template>
     <section class="sectionPresentation">
         <div class="presentation">
-            <h2>RÉSIDENCE À L’IRMAR</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.</p>
-            <a href="">Dossier de presse </a>
+            <h2><slot name="title"></slot></h2>
+            <p><slot name="description"></slot></p>
+            <slot name="downloadPress"><a href="">TELECHARGER DOSSIER DE PRESS</a></slot>
         </div>
     </section>
 </template>
@@ -70,6 +70,10 @@
         border: solid 1px var(--white);
     }
 
+    a:hover{
+        background-color: var(--goldHover);
+    }
+
 
     @media screen and (max-width: 900px)  {
 
@@ -82,7 +86,7 @@
         }
 
         p{
-            font-size: 18px;
+            font-size: 16px;
             margin: 15px 0 40px 0;
         }
 

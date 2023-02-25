@@ -76,12 +76,12 @@
                 <p class="projectsArchived">Projets archivés &#9660;</p>
                 
                 <ul class="menu">
-                    <li><a href="#">IRMAR</a></li>
-                    <li><a href="#">RÉVÉRENCE</a></li>
-                    <li><a href="#">SABRE LASER</a></li>
-                    <li><a href="#">MARCHE DES BLESSÉS DE GUERRE</a></li>
-                    <li><a href="#">ESTAMPIE</a></li>
-                    <li><a href="#">ENDURANCE</a></li>
+                    <li><a href="home">IRMAR</a></li>
+                    <li><a href="reverence">RÉVÉRENCE</a></li>
+                    <li><a href="sabre-laser">SABRE LASER</a></li>
+                    <li><a href="marche-des-blesses-de-guerre">MARCHE DES BLESSÉS DE GUERRE</a></li>
+                    <li><a href="estamestampiepie">ESTAMPIE</a></li>
+                    <li><a href="endurance">ENDURANCE</a></li>
                 </ul>
             
             </li>

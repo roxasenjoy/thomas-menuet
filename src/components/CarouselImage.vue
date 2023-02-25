@@ -32,7 +32,7 @@
                         itemsToShow: 3,
                     },
                     1920: {
-                        itemsToShow: 5,
+                        itemsToShow: this.nbImages,
                     },
                 },
             }

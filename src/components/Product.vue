@@ -200,7 +200,6 @@
 
 
     /* Pagination */
-
     .contentItems{
         display: flex;
         justify-content: center;
@@ -247,7 +246,7 @@
 
         .contentContainer{
             flex-direction: column;   
-            padding: 20px;
+            padding: 20px 0;
         }
 
         .informationsProduct{
