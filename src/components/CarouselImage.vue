@@ -75,7 +75,7 @@
         </div>
 
         <div class="containerSlide">
-            <Carousel :wrap-around="true" :settings="settings" :breakpoints="breakpoints" :autoplay="2000" :transition="2000">
+            <Carousel :wrap-around="true" :settings="settings" :breakpoints="breakpoints" :autoplay="1000" :transition="2000">
                 <Slide v-for="image in images" :key="image.id">
                     <div class="carousel__item" :style="{ backgroundImage: image.url }" @click="setImageSelected(image.id)"></div>
                 </Slide>
