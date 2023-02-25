@@ -117,6 +117,7 @@ nav{
     height: 4.5rem;
     width: 100vw;
     background-color: var(--black);
+    border-bottom: 1.5px solid var(--gold);
     box-shadow: 0 3px 20px var(--black);
     display: flex;
     position: fixed;

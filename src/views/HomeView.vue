@@ -4,11 +4,16 @@
     import Separation from '@/components/Separation.vue';
     import Presentation from '@/components/Presentation.vue';
     import CarouselImage from '@/components/CarouselImage.vue';
+    import Audio from '@/components/Audio.vue';
 
     import image1 from '@/assets/img/IRMAR/IRMAR_1.jpg';
     import image2 from '@/assets/img/IRMAR/IRMAR_2.jpg';
     import image3 from '@/assets/img/IRMAR/IRMAR_3.jpg';
     import image4 from '@/assets/img/IRMAR/presentation.jpg';
+
+
+
+    import Product from '@/components/Product.vue';
 
     export default({
         components: {
@@ -16,6 +21,8 @@
             Separation,
             Presentation,
             CarouselImage,
+            Product,
+            Audio
         },
 
         data() {
@@ -32,7 +39,63 @@
                 {id: 4, url:'url(' + image4 + ')', description: 'description random'},
             ];
 
-            return { images };
+            const listElements = [
+                {id: 1, color: "var(--gold)", active: 1}, // Actif
+                {id: 2, color: "var(--white)", active: 0}, // Pas actif
+                {id: 3, color: "var(--grey)", active: 0},
+                {id: 4, color: "var(--grey)", active: -1}, // Indisponible
+            ];
+
+            const details = [
+                {
+                    id: 1,
+                    url:'url(' + image1 + ')', 
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.', 
+                    title: 'Henle Album : Partition n°1', 
+                    price: 20, 
+                    author:'Piano Music from Thomas MENUET', 
+                    btnText: 'PRÉCOMMANDER LA PARTITION',
+                    mailText: 'Je suis le texte qui va se retrouver dans le mail en attendant d avoir quelque chose de fonctionnel',
+                    hasAudio: true,
+                    linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0'
+                },
+                {
+                    id: 2,
+                    url:'url(' + image1 + ')', 
+                    description: 'description random', 
+                    title: 'Titre de l album', 
+                    price: 1400, 
+                    author:'', 
+                    btnText: 'Commander la partition',
+                    mailText: 'Je suis le texte qui va se retrouver dans le mail en attendant d avoir quelque chose de fonctionnel',
+                    hasAudio: true,
+                    linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0'
+                },
+                {
+                    id: 3,
+                    url:'url(' + image1 + ')', 
+                    description: 'description random', 
+                    title: 'Titre de l album', 
+                    price: 150, 
+                    author:'', 
+                    btnText: 'Commander la partition',
+                    mailText: 'Je suis le texte qui va se retrouver dans le mail en attendant d avoir quelque chose de fonctionnel',
+                    hasAudio: true,
+                    linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0'
+                },
+            ];
+
+            const listAudios = [
+                [
+                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
+                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
+                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
+                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
+                ],
+                true
+            ];
+
+            return { images, listElements, details, listAudios };
         },
     });
 
@@ -46,6 +109,8 @@
     <Separation></Separation>
     <Presentation></Presentation>
     <CarouselImage :images="images" :nbImages=nbImages></CarouselImage>
+    <Product  :listElements="listElements" :details="details"></Product>
+    <Audio :listAudios="listAudios"></Audio>
 
 
 </template>

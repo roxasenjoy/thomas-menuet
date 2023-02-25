@@ -63,9 +63,7 @@
 <template>
 
     <div class="sliderContainer">
-
         <div class="imgSelectedContainer">
-
             <div class="imageSelected" :style="{ backgroundImage: imageSelected.url }"></div>
             <div class="text">
                 <p>{{ imageSelected.description }}</p>                
@@ -75,7 +73,7 @@
         </div>
 
         <div class="containerSlide">
-            <Carousel :wrap-around="true" :settings="settings" :breakpoints="breakpoints" :autoplay="1000" :transition="2000">
+            <Carousel :wrap-around="true" :settings="settings" :breakpoints="breakpoints" :autoplay="1000" :transition="2000" class="carousel__vue">
                 <Slide v-for="image in images" :key="image.id">
                     <div class="carousel__item" :style="{ backgroundImage: image.url }" @click="setImageSelected(image.id)"></div>
                 </Slide>
@@ -86,9 +84,52 @@
     
 </template>
   
-<style>
+<style scoped>
 
-    /* Image sélectionnée */
+    /*******Image sélectionnée FIN******/
+    .sliderContainer{
+        position: relative;
+        min-height: 200px;
+        padding-bottom: 150px;
+    }
+
+    .containerSlide{
+        position: relative;
+        z-index: 2;
+    }
+
+    .carousel__vue{
+        position: absolute;
+        top: -10px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .carousel__item {
+        height: 300px;
+        width: 100%;
+        color: var(--black);
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        cursor: pointer;
+    }
+
+    .carousel__slide {
+        padding: 10px;
+    }
+
+    .carousel__prev,
+    .carousel__next {
+        box-sizing: content-box;
+    }
+
     .imgSelectedContainer{
         width: 70%;
         margin: auto;
@@ -126,46 +167,6 @@
     .imageSelected,
     .text{
         padding: 50px;
-    }
-
-
-    /*******Image sélectionnée FIN******/
-
-
-    .sliderContainer{
-        position: relative;
-        min-height: 200px;
-    }
-
-    .containerSlide{
-        position: absolute;
-        overflow: hidden;
-        width: 100%;
-    }
-
-    .carousel__item {
-        height: 300px;
-        width: 100%;
-        color: var(--black);
-        font-size: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        cursor: pointer;
-    }
-
-    .carousel__slide {
-        padding: 10px;
-    }
-
-    .carousel__prev,
-    .carousel__next {
-        box-sizing: content-box;
     }
 
     @media screen and (max-width: 1240px)  {
