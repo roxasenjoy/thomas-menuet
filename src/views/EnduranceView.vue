@@ -7,10 +7,13 @@
     import Audio from '@/components/Audio.vue';
     import Enigme from '@/components/Enigme.vue';
 
-    import image1 from '@/assets/img/IRMAR/IRMAR_1.jpg';
-    import image2 from '@/assets/img/IRMAR/IRMAR_2.jpg';
-    import image3 from '@/assets/img/IRMAR/IRMAR_3.jpg';
-    import image4 from '@/assets/img/IRMAR/presentation.jpg';
+    import image1 from '@/assets/img/endurance/1.jpg';
+    import image2 from '@/assets/img/endurance/2.jpg';
+    import image3 from '@/assets/img/endurance/3.jpg';
+    import image4 from '@/assets/img/endurance/4.jpg';
+    import image5 from '@/assets/img/endurance/5.jpg';
+    import image6 from '@/assets/img/endurance/6.jpg';
+    import image7 from '@/assets/img/endurance/7.jpg';
 
     import Product from '@/components/Product.vue';
 
@@ -36,80 +39,30 @@
                 {id: 1, url:'url(' + image1 + ')', description: 'description random'},
                 {id: 2, url:'url(' + image2 + ')', description: 'description random'},
                 {id: 3, url:'url(' + image3 + ')', description: 'description random'},
-                {id: 4, url:'url(' + image4 + ')', description: 'description random'}
+                {id: 4, url:'url(' + image4 + ')', description: 'description random'},
+                {id: 5, url:'url(' + image5 + ')', description: 'description random'},
+                {id: 6, url:'url(' + image6 + ')', description: 'description random'},
+                {id: 7, url:'url(' + image7 + ')', description: 'description random'}
             ];
 
-            const listElements = [
-                {id: 1, color: "var(--gold)", active: 1}, // Actif
-                {id: 2, color: "var(--white)", active: 0}, // Pas actif
-                {id: 3, color: "var(--grey)", active: 0},
-                {id: 4, color: "var(--grey)", active: -1}, // Indisponible
-            ];
+            const listElements: never[] = [];
 
             const details = [
                 {
                     id: 1,
                     url:'url(' + image1 + ')', 
                     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.', 
-                    title: 'Henle Album : Partition n°1', 
+                    title: 'ENDURANCE', 
                     price: 20, 
-                    author:'Piano Music from Thomas MENUET', 
-                    btnText: 'PRÉCOMMANDER LA PARTITION',
+                    author:'Quatuor', 
+                    btnText: 'COMMANDER LA PARTITION',
                     mailText: 'Je suis le texte qui va se retrouver dans le mail en attendant d avoir quelque chose de fonctionnel',
                     hasAudio: true,
                     linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0'
-                },
-                {
-                    id: 2,
-                    url:'url(' + image1 + ')', 
-                    description: 'description random', 
-                    title: 'Titre de l album', 
-                    price: 1400, 
-                    author:'', 
-                    btnText: 'Commander la partition',
-                    mailText: 'Je suis le texte qui va se retrouver dans le mail en attendant d avoir quelque chose de fonctionnel',
-                    hasAudio: true,
-                    linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0'
-                },
-                {
-                    id: 3,
-                    url:'url(' + image1 + ')', 
-                    description: 'description random', 
-                    title: 'Titre de l album', 
-                    price: 150, 
-                    author:'', 
-                    btnText: 'Commander la partition',
-                    mailText: 'Je suis le texte qui va se retrouver dans le mail en attendant d avoir quelque chose de fonctionnel',
-                    hasAudio: true,
-                    linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0'
-                },
+                }
             ];
 
-            const listAudios = [
-                [
-                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
-                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
-                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
-                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
-                ],
-                true
-            ];
-
-            const listImgEnigmes = [
-                {url:'url(' + image1 + ')'}, 
-                {url:'url(' + image2 + ')'}, 
-                {url:'url(' + image3 + ')'}, 
-                {url:'url(' + image4 + ')'}
-            ];
-
-            const listElementsEnigme = [
-                {id: 1, color: "var(--gold)", active: 1}, // Actif
-                {id: 2, color: "var(--white)", active: 0}, // Pas actif
-                {id: 3, color: "var(--grey)", active: 0},
-                {id: 4, color: "var(--grey)", active: -1}, // Indisponible
-            ];
-
-            return { images, listElements, details, listAudios, listImgEnigmes, listElementsEnigme};
+            return { images, listElements, details};
         },
     });
 
@@ -121,11 +74,15 @@
 
     <Header></Header>
     <Separation></Separation>
-    <Presentation></Presentation>
+    <Presentation>
+
+        <template v-slot:title>ENDURANCE</template>
+        <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.</template>
+        <template v-slot:downloadPress>.</template>
+
+    </Presentation>
     <CarouselImage :images="images" :nbImages=nbImages></CarouselImage>
     <Product  :listElements="listElements" :details="details"></Product>
-    <Audio :listAudios="listAudios"></Audio>
-    <Enigme :listImgEnigmes="listImgEnigmes" :listElementsEnigme="listElementsEnigme"></Enigme>
 
 
 </template>

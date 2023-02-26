@@ -20,25 +20,28 @@
 
 <template>
     <section class="sectionShowMenu">
-        <Citations @show="displayHeader"></Citations>
 
-            <div class="name-container">
-                <Transition name="header">
-                    <div class="name" v-if="show">
-                        <p>LOGO</p>
-                        <h1>Thomas Menuet <br> présente</h1>
-                    </div>
-                </Transition>
-            </div>
+        <slot name="content">
+            <Citations @show="displayHeader"></Citations>
 
-            <div class="btn-container">
-                <Transition name="headerBtn">
-                    <div class="btn" v-if="show">
-                        <a href="#">Commander</a>
-                        <h1>Thomas Menuet ?</h1>
-                    </div>
-                </Transition>
-            </div>
+                <div class="name-container">
+                    <Transition name="header">
+                        <div class="name" v-if="show">
+                            <p>LOGO</p>
+                            <h1>Thomas Menuet <br> présente</h1>
+                        </div>
+                    </Transition>
+                </div>
+
+                <div class="btn-container">
+                    <Transition name="headerBtn">
+                        <div class="btn" v-if="show">
+                            <a href="#">Commander</a>
+                            <h1>Thomas Menuet ?</h1>
+                        </div>
+                    </Transition>
+                </div>
+            </slot>
         
     </section>
 </template>

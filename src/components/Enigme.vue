@@ -2,6 +2,7 @@
 <script lang="ts">
     import { defineComponent } from 'vue';
     import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel';
+    
   
     export default defineComponent({
 
@@ -70,7 +71,7 @@
             <div class="enigme__right">
                 <p class="enigme__title">ÉNIGME</p>
                 <p class="enigme__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.</p>
-                <a href="TELECHARGER LES ENIGMES" class="enigme__btn">TELECHARGER LES ÉNIGMES</a>
+                <a href="/enigmes.zip" download class="enigme__btn">TELECHARGER LES ÉNIGMES</a>
             </div>
         </div>
         
@@ -168,7 +169,7 @@
 
         .enigme__content{
             width: 90%;
-            flex-direction: column-reverse;
+            flex-direction: column;
         }
 
         .enigme__left{

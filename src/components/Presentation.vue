@@ -10,7 +10,7 @@
         <div class="presentation">
             <h2><slot name="title"></slot></h2>
             <p><slot name="description"></slot></p>
-            <slot name="downloadPress"><a href="">TELECHARGER DOSSIER DE PRESS</a></slot>
+            <slot name="downloadPress"><a href="">TELECHARGER DOSSIER DE PRESSE</a></slot>
         </div>
     </section>
 </template>
@@ -49,6 +49,7 @@
         font-family: var(--nycd);
         font-size: 54px;
         color: var(--white);
+        
     }
 
     p{
@@ -68,6 +69,7 @@
         margin-top: 15px;
         text-decoration: none;
         border: solid 1px var(--white);
+        display: inline-block;
     }
 
     a:hover{

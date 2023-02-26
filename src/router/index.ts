@@ -6,6 +6,7 @@ import SabreLaserView from '../views/SabreLaserView.vue';
 import MarcheBlessesView from '../views/MarcheBlessesView.vue';
 import EstampieView from '../views/EstampieView.vue';
 import EnduranceView from '../views/EnduranceView.vue';
+import CommandViewVue from '@/views/CommandView.vue';
 
 
 const router = createRouter({
@@ -44,7 +45,7 @@ const router = createRouter({
     {
       path: '/commander',
       name: 'commander',
-      component: () => import('../views/CommandView.vue')
+      component: CommandViewVue
     }
   ]
 })

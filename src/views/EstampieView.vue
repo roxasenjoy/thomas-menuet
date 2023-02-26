@@ -2,17 +2,19 @@
 
     import Header from '@/components/Header.vue';
     import Separation from '@/components/Separation.vue';
-    import Presentation from '@/components/Presentation.vue';
+    import Presentation from '@/components/Presentation.vue'; 
+    import Product from '@/components/Product.vue';
     import CarouselImage from '@/components/CarouselImage.vue';
     import Audio from '@/components/Audio.vue';
     import Enigme from '@/components/Enigme.vue';
 
-    import image1 from '@/assets/img/IRMAR/IRMAR_1.jpg';
-    import image2 from '@/assets/img/IRMAR/IRMAR_2.jpg';
-    import image3 from '@/assets/img/IRMAR/IRMAR_3.jpg';
-    import image4 from '@/assets/img/IRMAR/presentation.jpg';
+    import image1 from '@/assets/img/refuge/1.jpg';
+    import image2 from '@/assets/img/refuge/2.jpg';
+    import image3 from '@/assets/img/refuge/3.jpg';
+    import image4 from '@/assets/img/refuge/4.jpg';
+    import image5 from '@/assets/img/refuge/5.jpg';
 
-    import Product from '@/components/Product.vue';
+   
 
     export default({
         components: {
@@ -85,29 +87,11 @@
                 },
             ];
 
-            const listAudios = [
-                [
-                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
-                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
-                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
-                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
-                ],
-                true
-            ];
+            const listAudios: never[] = [];
 
-            const listImgEnigmes = [
-                {url:'url(' + image1 + ')'}, 
-                {url:'url(' + image2 + ')'}, 
-                {url:'url(' + image3 + ')'}, 
-                {url:'url(' + image4 + ')'}
-            ];
+            const listImgEnigmes: never[] = [];
 
-            const listElementsEnigme = [
-                {id: 1, color: "var(--gold)", active: 1}, // Actif
-                {id: 2, color: "var(--white)", active: 0}, // Pas actif
-                {id: 3, color: "var(--grey)", active: 0},
-                {id: 4, color: "var(--grey)", active: -1}, // Indisponible
-            ];
+            const listElementsEnigme: never[] = [];
 
             return { images, listElements, details, listAudios, listImgEnigmes, listElementsEnigme};
         },
@@ -121,11 +105,15 @@
 
     <Header></Header>
     <Separation></Separation>
-    <Presentation></Presentation>
+    <Presentation>
+
+        <template v-slot:title>ESTAMPIE</template>
+        <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.</template>
+        <template v-slot:downloadPress>.</template>
+
+    </Presentation>
     <CarouselImage :images="images" :nbImages=nbImages></CarouselImage>
     <Product  :listElements="listElements" :details="details"></Product>
-    <Audio :listAudios="listAudios"></Audio>
-    <Enigme :listImgEnigmes="listImgEnigmes" :listElementsEnigme="listElementsEnigme"></Enigme>
 
 
 </template>

@@ -3,6 +3,7 @@
     import Header from '@/components/Header.vue';
     import Separation from '@/components/Separation.vue';
     import Presentation from '@/components/Presentation.vue';
+    import Product from '@/components/Product.vue';
     import CarouselImage from '@/components/CarouselImage.vue';
     import Audio from '@/components/Audio.vue';
     import Enigme from '@/components/Enigme.vue';
@@ -11,8 +12,12 @@
     import image2 from '@/assets/img/IRMAR/IRMAR_2.jpg';
     import image3 from '@/assets/img/IRMAR/IRMAR_3.jpg';
     import image4 from '@/assets/img/IRMAR/presentation.jpg';
+    import image5 from '@/assets/img/IRMAR/9.jpeg';
+    import image6 from '@/assets/img/IRMAR/4.jpg';
 
-    import Product from '@/components/Product.vue';
+    import enigme1 from '@/assets/img/enigmes/1.jpg';
+
+   
 
     export default({
         components: {
@@ -33,10 +38,10 @@
 
         setup() {
             const images = [
-                {id: 1, url:'url(' + image1 + ')', description: 'description random'},
-                {id: 2, url:'url(' + image2 + ')', description: 'description random'},
-                {id: 3, url:'url(' + image3 + ')', description: 'description random'},
-                {id: 4, url:'url(' + image4 + ')', description: 'description random'}
+                {id: 1, url:'url(' + image6 + ')', description: 'description random'},
+                {id: 2, url:'url(' + image1 + ')', description: 'description random'},
+                {id: 6, url:'url(' + image5 + ')', description: 'description random'},
+                
             ];
 
             const listElements = [
@@ -96,16 +101,13 @@
             ];
 
             const listImgEnigmes = [
-                {url:'url(' + image1 + ')'}, 
-                {url:'url(' + image2 + ')'}, 
-                {url:'url(' + image3 + ')'}, 
-                {url:'url(' + image4 + ')'}
+                {url:'url(' + enigme1 + ')'}
             ];
 
             const listElementsEnigme = [
                 {id: 1, color: "var(--gold)", active: 1}, // Actif
-                {id: 2, color: "var(--white)", active: 0}, // Pas actif
-                {id: 3, color: "var(--grey)", active: 0},
+                {id: 2, color: "var(--white)", active: -1}, // Pas actif
+                {id: 3, color: "var(--grey)", active: -1},
                 {id: 4, color: "var(--grey)", active: -1}, // Indisponible
             ];
 

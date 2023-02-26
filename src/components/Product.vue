@@ -4,13 +4,15 @@
   
     export default defineComponent({
 
-        props: ['listElements', 'details'],
+        props: ['listElements', 'details', 'colorBackground', 'colorText'],
 
         data() {
             return {
-                elements: this.listElements, // Récupération props - HomeView
-                detailsElements: this.details,
-                previousElement: 0
+                elements        : this.listElements, // Récupération props - HomeView
+                detailsElements : this.details,
+                previousElement : 0,
+                colorBackground : this.colorBackground ? this.colorBackground : 'var(--black)',
+                colorText       : this.colorText ? this.colorText : 'var(--white)',
             }
         },
 
@@ -36,10 +38,9 @@
 </script>
 
 <template>
+    <div class="productContainer" :style="{backgroundColor: colorBackground, color: colorText}">
 
-    <div class="productContainer">
-        
-        <h4> PARTITIONS </h4>
+        <h4 :style="{color: colorText}"> <slot slot name="title">PARTITIONS</slot></h4>
 
         <div class="contentContainer">
             <div class="imageProduct" :style="{ backgroundImage: detailsElements.url }"></div>
@@ -48,21 +49,21 @@
                 <!-- Informations principales -->
                 <div class="product">
                     
-                    <div class="product__content">
+                    <div class="product__content" :style="{color: colorText}">
                         <div class="product__audio__title">
                             <a class="product__audio" :href="detailsElements.linkAudio" v-if="detailsElements.hasAudio" target="_blank">
                                 <i class="fa-solid fa-circle-play product__audio_icon"></i>
                             </a>
                             <h3 class="product__title">{{detailsElements.title}}</h3>
                         </div>
-                        <p class="product__price">{{detailsElements.price }}€</p>
+                        <p class="product__price">{{detailsElements.price }}€ </p>
                     </div>
 
-                    <p class="product__author">{{ detailsElements.author }}</p>
+                    <p class="product__author" :style="{color: colorText}">{{ detailsElements.author }}</p>
                 </div>
 
                 <!-- Description -->
-                <p class="product__description">{{ detailsElements.description }}</p>
+                <p class="product__description" :style="{color: colorText}">{{ detailsElements.description }}</p>
 
                 <a :href="' mailto:hello@hello.com \
                             ?subject=COMMANDE - ' + detailsElements.title + ' à ' + detailsElements.price +'€ \

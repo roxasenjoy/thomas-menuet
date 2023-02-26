@@ -1,4 +1,5 @@
 <script lang="ts">
+
     export default {
 
         created () {
@@ -71,22 +72,21 @@
             <div class="line3"></div>
         </div>
         <ul class="nav-links">
-            <li><a href="#">Accueil</a></li>
+            <li><router-link :to="{ name: 'home'}">Accueil</router-link></li>
             <li class="deroulant">
                 <p class="projectsArchived">Projets archivés &#9660;</p>
                 
                 <ul class="menu">
-                    <li><a href="home">IRMAR</a></li>
-                    <li><a href="reverence">RÉVÉRENCE</a></li>
-                    <li><a href="sabre-laser">SABRE LASER</a></li>
-                    <li><a href="marche-des-blesses-de-guerre">MARCHE DES BLESSÉS DE GUERRE</a></li>
-                    <li><a href="estamestampiepie">ESTAMPIE</a></li>
-                    <li><a href="endurance">ENDURANCE</a></li>
+                    <li><router-link :to="{ name: 'home'}">IRMAR</router-link></li>
+                    <li><router-link :to="{ name: 'reverence'}">RÉVÉRENCE</router-link></li>
+                    <li><router-link :to="{ name: 'marche'}">MARCHE DES BLESSÉS DE GUERRE</router-link></li>
+                    <li><router-link :to="{ name: 'estampie'}">ESTAMPIE</router-link></li>
+                    <li><router-link :to="{ name: 'endurance'}">ENDURANCE</router-link></li>     
                 </ul>
             
             </li>
             <li><a href="#">Biographie</a></li>
-            <li><a href="#">Commander</a></li> <!-- A changer avec un template -->
+            <li><router-link :to="{ name: 'commander'}" id="command">COMMANDER</router-link></li> <!-- A changer avec un template -->
             <li><a></a></li>
         </ul>
     </nav>
@@ -139,7 +139,6 @@ nav{
     left: 10px;
     background-color: var(--black);
     transition: all 1s ease-in-out;
-    
     display: none;
 }
 
@@ -159,6 +158,8 @@ nav{
 }
 
 /*Styling Links*/
+
+
 .nav-links{
     display: flex;
     list-style: none; 
@@ -184,6 +185,17 @@ nav{
     color: var(--gold);
 }
 
+
+#command{
+    background-color: var(--gold);
+    color: var(--white);
+    padding: 10px 25px;
+}
+
+#command::after{
+    top: 2.5px !important;
+}
+
 .nav-links li a::before,
 .projectsArchived::before {
     content: "";
@@ -196,6 +208,8 @@ nav{
     margin-top: 20px;
     left: 0px;
 }
+
+
 
 .nav-links li a:after,
 .projectsArchived::after{

@@ -7,10 +7,16 @@
     import Audio from '@/components/Audio.vue';
     import Enigme from '@/components/Enigme.vue';
 
-    import image1 from '@/assets/img/IRMAR/IRMAR_1.jpg';
-    import image2 from '@/assets/img/IRMAR/IRMAR_2.jpg';
-    import image3 from '@/assets/img/IRMAR/IRMAR_3.jpg';
-    import image4 from '@/assets/img/IRMAR/presentation.jpg';
+    import image1 from '@/assets/img/marche/1.jpg';
+    import image2 from '@/assets/img/marche/2.jpg';
+    import image3 from '@/assets/img/marche/3.jpg';
+    import image4 from '@/assets/img/marche/4.jpg';
+    import image5 from '@/assets/img/marche/5.jpg';
+    import image6 from '@/assets/img/marche/6.jpg';
+    import image7 from '@/assets/img/marche/7.jpg';
+    import image8 from '@/assets/img/marche/8.jpg';
+    import image9 from '@/assets/img/marche/9.jpg';
+    import image10 from '@/assets/img/marche/10.jpg';
 
     import Product from '@/components/Product.vue';
 
@@ -33,17 +39,21 @@
 
         setup() {
             const images = [
-                {id: 1, url:'url(' + image1 + ')', description: 'description random'},
-                {id: 2, url:'url(' + image2 + ')', description: 'description random'},
-                {id: 3, url:'url(' + image3 + ')', description: 'description random'},
-                {id: 4, url:'url(' + image4 + ')', description: 'description random'}
+                {id: 1, url:'url(' + image10 + ')', description: 'description random'},
+                {id: 2, url:'url(' + image1 + ')', description: 'description random'},
+                {id: 3, url:'url(' + image2 + ')', description: 'description random'},
+                {id: 4, url:'url(' + image3 + ')', description: 'description random'},
+                {id: 5, url:'url(' + image4 + ')', description: 'description random'},
+                {id: 6, url:'url(' + image5 + ')', description: 'description random'},
+                {id: 7, url:'url(' + image6 + ')', description: 'description random'},
+                {id: 8, url:'url(' + image7 + ')', description: 'description random'},
+                {id: 9, url:'url(' + image8 + ')', description: 'description random'},
+                {id: 10, url:'url(' + image9 + ')', description: 'description random'}
             ];
 
             const listElements = [
                 {id: 1, color: "var(--gold)", active: 1}, // Actif
                 {id: 2, color: "var(--white)", active: 0}, // Pas actif
-                {id: 3, color: "var(--grey)", active: 0},
-                {id: 4, color: "var(--grey)", active: -1}, // Indisponible
             ];
 
             const details = [
@@ -51,10 +61,10 @@
                     id: 1,
                     url:'url(' + image1 + ')', 
                     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.', 
-                    title: 'Henle Album : Partition n°1', 
+                    title: 'MARCHE DES BLESSÉS DE GUERRE', 
                     price: 20, 
-                    author:'Piano Music from Thomas MENUET', 
-                    btnText: 'PRÉCOMMANDER LA PARTITION',
+                    author:'Pour fanfare, Harmonie et Brassband', 
+                    btnText: 'COMMANDER LA PARTITION',
                     mailText: 'Je suis le texte qui va se retrouver dans le mail en attendant d avoir quelque chose de fonctionnel',
                     hasAudio: true,
                     linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0'
@@ -63,22 +73,10 @@
                     id: 2,
                     url:'url(' + image1 + ')', 
                     description: 'description random', 
-                    title: 'Titre de l album', 
+                    title: 'MARCHE DES BLESSÉS DE GUERRE', 
                     price: 1400, 
-                    author:'', 
-                    btnText: 'Commander la partition',
-                    mailText: 'Je suis le texte qui va se retrouver dans le mail en attendant d avoir quelque chose de fonctionnel',
-                    hasAudio: true,
-                    linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0'
-                },
-                {
-                    id: 3,
-                    url:'url(' + image1 + ')', 
-                    description: 'description random', 
-                    title: 'Titre de l album', 
-                    price: 150, 
-                    author:'', 
-                    btnText: 'Commander la partition',
+                    author:'Pour fanfare, Harmonie et Brassband', 
+                    btnText: 'COMMANDER LA PARTITION',
                     mailText: 'Je suis le texte qui va se retrouver dans le mail en attendant d avoir quelque chose de fonctionnel',
                     hasAudio: true,
                     linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0'
@@ -87,27 +85,15 @@
 
             const listAudios = [
                 [
-                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
-                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
-                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
-                    {title: 'Titre de la partition n°1', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:30", instruments: "Deux violons - Simulation"}, 
+                    {title: 'Marche des bléssés de guerre', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:34", instruments: "Version de création, harmonie de la Marine, Parc André Citroën / Paris"}, 
+                    {title: 'Marche des bléssés de guerre', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:34", instruments: "Version par l’harmonie des transmissions, place de la mairie / Rennes"}, 
                 ],
-                true
+                false // En cours de création ?
             ];
 
-            const listImgEnigmes = [
-                {url:'url(' + image1 + ')'}, 
-                {url:'url(' + image2 + ')'}, 
-                {url:'url(' + image3 + ')'}, 
-                {url:'url(' + image4 + ')'}
-            ];
+            const listImgEnigmes: never[] = [];
 
-            const listElementsEnigme = [
-                {id: 1, color: "var(--gold)", active: 1}, // Actif
-                {id: 2, color: "var(--white)", active: 0}, // Pas actif
-                {id: 3, color: "var(--grey)", active: 0},
-                {id: 4, color: "var(--grey)", active: -1}, // Indisponible
-            ];
+            const listElementsEnigme: never[] = [];
 
             return { images, listElements, details, listAudios, listImgEnigmes, listElementsEnigme};
         },
@@ -119,30 +105,35 @@
 
 <template>
 
-    <Header></Header>
+<Header></Header>
     <Separation></Separation>
-    <Presentation></Presentation>
+    <Presentation>
+
+        <template v-slot:title>MARCHE DES BLESSÉS DE GUERRE</template>
+        <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.</template>
+        <template v-slot:downloadPress>.</template>
+
+    </Presentation>
     <CarouselImage :images="images" :nbImages=nbImages></CarouselImage>
     <Product  :listElements="listElements" :details="details"></Product>
     <Audio :listAudios="listAudios"></Audio>
-    <Enigme :listImgEnigmes="listImgEnigmes" :listElementsEnigme="listElementsEnigme"></Enigme>
 
 
 </template>
 
-<style>
+<style scoped>
 
     /* Changement de la photo */
     .sectionShowMenu {
         background-image: 
             linear-gradient(rgba(000, 000, 000, 0.6), rgba(000, 000, 000, 0.6)),
-            url("@/assets/img/IRMAR/IRMAR_3.jpg");
+            url("@/assets/img/marche/9.jpg");
     } 
 
     .sectionPresentation {
         background-image: 
             linear-gradient(rgba(000, 000, 000, 0.6), rgba(000, 000, 000, 0.6)),
-            url("@/assets/img/IRMAR/presentation.jpg");
+            url("@/assets/img/marche/5.jpg");
     } 
 
 
