@@ -36,7 +36,7 @@
                 <div class="btn-container">
                     <Transition name="headerBtn">
                         <div class="btn" v-if="show">
-                            <a href="#">Commander</a>
+                            <router-link :to="{ name: 'commander'}" id="command">Commander</router-link>
                             <h1>Thomas Menuet ?</h1>
                         </div>
                     </Transition>
