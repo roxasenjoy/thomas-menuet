@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Montserrat-Bold";
-  src: url("./fonts/Montserrat/Montserrat-Bold.ttf");
+  src: url("./fonts/Montserrat/Montserrat-Medium.ttf");
 }
 
 @font-face {
@@ -18,6 +18,47 @@
   src: url("./fonts/Nothing-You-Could-Do/NothingYouCouldDo-Regular.ttf");
 }
 
+@font-face {
+	font-family: "Raleway-Thin";
+	src: url("./fonts/Raleway/Raleway-Light.ttf");
+}
+
+@font-face {
+	font-family: "Raleway-Regular";
+	src: url("./fonts/Raleway/Raleway-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Gota";
+	src: url("./fonts/Gota/Gota.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "PFD-Regular";
+	src: url("./fonts/Playfair/PlayfairDisplay-Regular.ttf") format("opentype");
+}
+
+@font-face {
+	font-family: "PFD-Medium";
+	src: url("./fonts/Playfair/PlayfairDisplay-Medium.ttf") format("opentype");
+}
+
+@font-face {
+	font-family: "PFD-Bold";
+	src: url("./fonts/Playfair/PlayfairDisplay-Bold.ttf") format("opentype");
+}
+
+@font-face {
+	font-family: "Opensans-regular";
+	src: url("./fonts/OpenSans/OpenSans-Regular.ttf") format("opentype");
+}
+
+@font-face {
+	font-family: "Opensans-bold";
+	src: url("./fonts/OpenSans/OpenSans-Bold.ttf") format("opentype");
+}
+
+
 :root{
 	--white: #FFFCF9;
 	--gold: #D5A100;
@@ -25,7 +66,7 @@
 	--black: #1D1D1D;
 	--grey: #E0E0E0;
 
-	--ms-regular: 'Montserrat-Regular', sans-serif;
+	--ms-regular: 'Montserrat-regular';
 	--ms-italic: 'Montserrat-Italic', sans-serif;
 	--ms-bold: 'Montserrat-Bold', sans-serif;
 	
