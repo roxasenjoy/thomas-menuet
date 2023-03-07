@@ -2,7 +2,11 @@
     import Citations from '@/components/Citations.vue';
 
     export default{
-        components: {Citations},
+        components: {
+            Citations
+        },
+
+
         data() {
             return { 
                 show: false,
@@ -11,64 +15,87 @@
         },
 
         methods:{
+
             displayHeader(){
                 this.show = true;
-            }
+            },
         }
     }
 </script>
 
 <template>
-    <section class="sectionShowMenu">
+    <section class="sectionShowMenu" id="headerHomepage">
 
         <slot name="content">
             <Citations @show="displayHeader"></Citations>
 
                 <div class="name-container">
-                    <Transition name="header">
-                        <div class="name" v-if="show">
-                            <p>LOGO</p>
-                            <h1>Thomas Menuet <br> présente</h1>
-                        </div>
-                    </Transition>
+                    <div class="name">
+                        <Transition name="logo"><p  v-if="show">LOGO</p></Transition>
+                        <Transition name="name"> <h1  v-if="show">Thomas Menuet <br> présente</h1></Transition>
+                    </div>
                 </div>
 
                 <div class="btn-container">
-                    <Transition name="headerBtn">
-                        <div class="btn" v-if="show">
-                            <router-link :to="{ name: 'commander'}" id="command">Commander</router-link>
-                            <h1>Thomas Menuet ?</h1>
-                        </div>
-                    </Transition>
+                    <div class="btn">
+                        <Transition name="commandBtn"><router-link v-if="show" :to="{ name: 'commander'}" id="command">Commander</router-link></Transition>
+                        <Transition name="biographie"><h1 v-if="show">Thomas Menuet ?</h1></Transition>
+                    </div>
                 </div>
-            </slot>
-        
+        </slot>
+
     </section>
+    
 </template>
 
 <style>
 
-    /* Animation */
-        .header-enter-active {
-            transition: all 1s ease-out;
-        }
 
-        .header-enter-from,
-        .header-leave-to {
-            transform: translateY(20px);
-            opacity: 0;
-        }
+    /* Logo */
+    .logo-enter-active{
+        transition: all 1s ease-out;
+    }
 
-        /* Btn */
-        .headerBtn-enter-active {
-            transition: all 2s ease-out;
-        }
+    .logo-enter-from,
+    .logo-leave-to {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
 
-        .headerBtn-enter-from,
-        .headerBtn-leave-to {
-            transform: translateY(20px);
-            opacity: 0;
-        }
+    /* name */
+    .name-enter-active{
+        transition: all 2s ease-out;
+    }
+
+    .name-enter-from,
+    .name-leave-to {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    /* commandBtn */
+    .commandBtn-enter-active{
+        transition: all 2s ease-out;
+    }
+
+    .commandBtn-enter-from,
+    .commandBtn-leave-to {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    /* biographie */
+    .biographie-enter-active{
+        transition: all 3s ease-out;
+    }
+
+    .biographie-enter-from,
+    .biographie-leave-to {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    
     /********* Fin animations *********/
 
     .sectionShowMenu {
@@ -95,7 +122,7 @@
     }
 
     .btn-container .btn a{
-        font-size: 30px;
+        font-size: 24px;
         font-family: var(--nycd);
         text-decoration: none;
         background-color: var(--gold);
@@ -107,7 +134,7 @@
     }
     
     .btn-container h1{
-        font-size: 30px;
+        font-size: 24px;
         color: var(--white);
         font-family: var(--nycd);
         text-align: center;
@@ -132,7 +159,7 @@
     }
 
     .name-container .name p{
-        font-size: 50px;
+        font-size: 40px;
         font-family: var(--nycd);
         margin-right: 50px;
         color: var(--white);
@@ -175,11 +202,11 @@
 
         .btn-container .btn a{
             margin-bottom: 10%;
-            font-size: 24px;
+            font-size: 18px;
         }
 
         .btn-container h1{
-            font-size: 24px;
+            font-size: 18px;
         }
         
     }

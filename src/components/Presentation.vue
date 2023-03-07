@@ -21,14 +21,14 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 70vh;
+        height: 50vh;
         position: relative;
     }
 
     @media screen and (max-width: 900px)  {
 
         .sectionPresentation{
-            height: 90vh;
+            height: 70vh;
         }
 
     }
@@ -47,17 +47,16 @@
 
     h2{
         font-family: var(--nycd);
-        font-size: 54px;
+        font-size: 40px;
         color: var(--white);
         
     }
 
     p{
-        font-size: 24px;
+        font-size: 20px;
         font-family: var(--ms-regular);
         color: var(--white);
         margin: 25px 0 50px 0;
-      
     }
 
     a{
@@ -65,7 +64,7 @@
         background: var(--gold);
         font-family: var(--ms-regular);
         padding: 10px 40px;
-        font-size: 18px;
+        font-size: 20px;
         margin-top: 15px;
         text-decoration: none;
         border: solid 1px var(--white);
@@ -84,7 +83,7 @@
         }
 
         h2{
-            font-size: 40px;
+            font-size: 30px;
         }
 
         p{
@@ -94,7 +93,7 @@
 
         a{
             padding: 10px 40px;
-            font-size: 18px;
+            font-size: 16px;
             margin-top: 15px;
             text-decoration: none;
             border: solid 1px var(--white);

@@ -29,6 +29,10 @@
                     document.querySelector("body")?.classList.add('initialBody');
                     setTimeout(() => {
                         this.$emit('show');
+                        setTimeout(() => {
+                            document.querySelector(".sectionShowMenu")?.classList.add('disabledBackground');
+                            
+                        }, 500);
                     }, 1500);
                 }, 5000);
             } else {
@@ -57,14 +61,18 @@
         transition: all 1s ease-out;
     }
 
-    .citations-leave-active {
-        transition: all 1s cubic-bezier(1, 0.5, 0.8, 1);
+    .citations-enter-from {
+        transform: translateY(-20px);
+        opacity: 0;
     }
 
-    .citations-enter-from,
-    .citations-leave-to {
+    .citations-leave-to{
         transform: translateY(20px);
         opacity: 0;
+    }
+
+    .citations-leave-active {
+        transition: all 1s ease-out;
     }
 
     body{

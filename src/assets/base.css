@@ -30,7 +30,7 @@
 
 @font-face {
 	font-family: "Gota";
-	src: url("./fonts/Gota/Gota.otf") format("opentype");
+	src: url("./fonts/Gota/light.otf") format("opentype");
 }
 
 @font-face {
@@ -49,28 +49,80 @@
 }
 
 @font-face {
-	font-family: "Opensans-regular";
-	src: url("./fonts/OpenSans/OpenSans-Regular.ttf") format("opentype");
+	font-family: "ubuntu-regular";
+	src: url("./fonts/Ubuntu/Ubuntu-Regular.ttf") format("opentype");
 }
 
-@font-face {
-	font-family: "Opensans-bold";
-	src: url("./fonts/OpenSans/OpenSans-Bold.ttf") format("opentype");
+@font-face { 
+	font-family: "CG-Regular";
+	src: url("./fonts/CG/CormorantGaramond-Regular.ttf") format("opentype");
 }
 
+@font-face { 
+	font-family: "Cinzel-regular";
+	src: url("./fonts/Cinzel-Decorative/CinzelDecorative-Regular.ttf") format("opentype");
+}
+
+@font-face { 
+	font-family: "Al-regular";
+	src: url("./fonts/Aleagreya/AlegreyaSC-Regular.ttf") format("opentype");
+}
+
+@font-face { 
+	font-family: "Averia-regular";
+	src: url("./fonts/Averia/AveriaLibre-Light.ttf") format("opentype");
+}
+
+@font-face { 
+	font-family: "Grenze";
+	src: url("./fonts/Grenze-Bis/Grenze-Regular.ttf") format("opentype");
+}
+
+@font-face { 
+	font-family: "Trochut";
+	src: url("./fonts/Trochut/Trochut-Regular.ttf") format("opentype");
+}
+
+@font-face { 
+	font-family: "Cinzel";
+	src: url("./fonts/Cinzel-Decorative/CinzelDecorative-Regular.ttf") format("opentype");
+}
+
+@font-face { 
+	font-family: "font";
+	src: url("./fonts/Bodomi/BodoniModa_28pt-Regular.ttf") format("opentype");
+}
+
+@font-face { 
+	font-family: "teko";
+	src: url("./fonts/Teko/Teko-Light.ttf") format("opentype");
+}
+
+@font-face { 
+	font-family: "Eczar";
+	src: url("./fonts/Ecazr/Eczar-Regular.ttf") format("opentype");
+}
+
+@font-face { 
+	font-family: "A-sans";
+	src: url("./fonts/Alegreya-Sans/AlegreyaSans-Light.ttf") format("opentype");
+}
 
 :root{
+	
+
 	--white: #FFFCF9;
 	--gold: #D5A100;
 	--goldHover: #a07800;
 	--black: #1D1D1D;
 	--grey: #E0E0E0;
 
-	--ms-regular: 'Montserrat-regular';
+	--ms-regular: 'A-sans';
 	--ms-italic: 'Montserrat-Italic', sans-serif;
 	--ms-bold: 'Montserrat-Bold', sans-serif;
 	
-	--nycd: 'NYCD-Regular', sans-serif;
+	--nycd: 'Trochut', sans-serif;
+	
 }
 
 *{

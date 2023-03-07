@@ -85,11 +85,11 @@
         border: solid 2px var(--gold);
         font-family:var(--ms-regular);
         margin: 50px auto;
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .audio__section_title{
-        font-size:54px;
+        font-size:40px;
         font-family: var(--nycd);
         text-align: center;
         padding: 75px 0 0 0;
@@ -98,7 +98,7 @@
     @media screen and (max-width: 900px)  {
 
         .audio__section_title{
-            font-size: 40px;
+            font-size: 30px;
         }
         
         .audio__item{
@@ -106,7 +106,7 @@
         }
         .audio__list{
             width: 95%;
-            font-size: 18px;
+            font-size: 16px;
         }
     }
 

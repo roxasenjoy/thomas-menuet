@@ -56,6 +56,7 @@
                 this.getRandomCitation();
             },
 
+
         }
     })
 </script>
@@ -73,11 +74,31 @@
         </div>
 
         <div class="containerSlide">
-            <Carousel :wrap-around="true" :settings="settings" :breakpoints="breakpoints" :autoplay="1000" :transition="2000" class="carousel__vue">
+            <Carousel :settings="settings" :breakpoints="breakpoints" :autoplay="1000" :transition="1000" :wrap-around="true" class="carousel__vue">
                 <Slide v-for="image in images" :key="image.id">
                     <div class="carousel__item" :style="{ backgroundImage: image.url }" @click="setImageSelected(image.id)"></div>
                 </Slide>
             </Carousel>
+
+            <!-- <div class="slider">
+                <div class="slide-track" >
+                    <div class="slide" v-for="image in images" :key="image.id">
+                        <div class="carousel__item" :style="{ backgroundImage: image.url }" @click="setImageSelected(image.id)"></div>
+                    </div>
+
+                    <div class="slide" v-for="image in images" :key="image.id">
+                        <div class="carousel__item" :style="{ backgroundImage: image.url }" @click="setImageSelected(image.id)"></div>
+                    </div>
+
+                    <div class="slide" v-for="image in images" :key="image.id">
+                        <div class="carousel__item" :style="{ backgroundImage: image.url }" @click="setImageSelected(image.id)"></div>
+                    </div>
+
+                    <div class="slide" v-for="image in images" :key="image.id">
+                        <div class="carousel__item" :style="{ backgroundImage: image.url }" @click="setImageSelected(image.id)"></div>
+                    </div>
+                </div>
+            </div> -->
         </div>
     </div>
 
@@ -86,30 +107,57 @@
   
 <style scoped>
 
-    /*******Image sélectionnée FIN******/
     .sliderContainer{
         position: relative;
-        min-height: 200px;
+        min-height: 100px;
         padding-bottom: 150px;
     }
 
     .containerSlide{
-        position: relative;
+        position: absolute;
         z-index: 2;
+        overflow-x: hidden;
+        width: 100%;
     }
 
-    .carousel__vue{
-        position: absolute;
-        top: -10px;
+
+    @keyframes scroll {
+        0% {
+        transform: translateX(0);
+        }
+        100% {
+        transform: translateX(calc(-400px * 7));
+        }
+    }
+    .slider {
+        height: 250px;
+        padding: 25px auto;
         overflow: hidden;
-        width: 100%;
+        position: relative;
+        width: auto;
+    }
+    .slider .slide-track {
+        animation: scroll 35s linear infinite;
+        display: flex;
+        width: calc(350px * 14);
+    }
+    .slider .slide {
+        height: 250px;
+        width: 500px;
+        display: flex;
+        font-size:30px;
+        font-family: var(--ralewayRegu);
+        letter-spacing: 1px;
+        justify-content: center;
+        align-items: center;
     }
 
     .carousel__item {
-        height: 300px;
-        width: 100%;
+        height: 250px;
+        width: 400px;
         color: var(--black);
-        font-size: 20px;
+        font-size: 18px;
+        margin: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -121,14 +169,14 @@
         cursor: pointer;
     }
 
-    .carousel__slide {
-        padding: 10px;
-    }
 
-    .carousel__prev,
-    .carousel__next {
-        box-sizing: content-box;
-    }
+    /*******Image sélectionnée FIN******/
+    
+
+    
+
+   
+
 
     .imgSelectedContainer{
         width: 70%;
@@ -140,12 +188,12 @@
         align-items: center;
         flex-direction: row;
 
-        padding: 50px;
+        padding: 100px 50px;
     }
 
     .imageSelected{
-        width: 400px;
-        height: 600px;
+        width: 300px;
+        height: 400px;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;

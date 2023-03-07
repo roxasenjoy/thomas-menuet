@@ -51,10 +51,7 @@
                 {id: 10, url:'url(' + image9 + ')', description: 'description random'}
             ];
 
-            const listElements = [
-                {id: 1, color: "var(--gold)", active: 1}, // Actif
-                {id: 2, color: "var(--white)", active: 0}, // Pas actif
-            ];
+            const listElements: any = [];
 
             const details = [
                 {
@@ -83,13 +80,7 @@
                 },
             ];
 
-            const listAudios = [
-                [
-                    {title: 'Marche des bléssés de guerre', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:34", instruments: "Version de création, harmonie de la Marine, Parc André Citroën / Paris"}, 
-                    {title: 'Marche des bléssés de guerre', linkAudio: 'https://www.youtube.com/watch?v=S8TvXhLtLa0', time: "2:34", instruments: "Version par l’harmonie des transmissions, place de la mairie / Rennes"}, 
-                ],
-                false // En cours de création ?
-            ];
+            const listAudios: any = [];
 
             const listImgEnigmes: never[] = [];
 
@@ -105,7 +96,7 @@
 
 <template>
 
-<Header></Header>
+    <Header></Header>
     <Separation></Separation>
     <Presentation>
 
@@ -116,7 +107,6 @@
     </Presentation>
     <CarouselImage :images="images" :nbImages=nbImages></CarouselImage>
     <Product  :listElements="listElements" :details="details"></Product>
-    <Audio :listAudios="listAudios"></Audio>
 
 
 </template>

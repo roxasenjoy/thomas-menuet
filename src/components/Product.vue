@@ -100,7 +100,7 @@
 
 
     h4{
-        font-size: 50px;
+        font-size: 40px;
         color: white;
         font-family: var(--nycd);
         text-align: center;
@@ -122,7 +122,7 @@
 
     .imageProduct{
         width: 300px;
-        height: 600px;
+        height: 500px;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -131,7 +131,7 @@
     }
 
     .informationsProduct{
-        font-size: 20px;
+        font-size: 18px;
         font-family:var(--ms-regular);
         color: var(--white);
         line-height: 150%;
@@ -164,20 +164,20 @@
 
     .product__title,
     .product__price{
-        font-size:30px;
+        font-size: 26px;
         font-family: var(--ms-regular);
         font-weight: 900;
     }
 
     .product__author{
-        font-size: 18px;
+        font-size: 16px;
         font-family: var(--ms-italic);
         color: var(--grey);
     }
 
     /*********************************/
     .product__description{
-        font-size: 20px;
+        font-size: 18px;
         line-height: 175%;
         font-family: var(--ms-regular);
         margin-bottom: 70px;
@@ -188,7 +188,7 @@
     .product__btn{
         background: var(--gold);
         color: var(--white);
-        font-size: 24px;
+        font-size: 20px;
         text-decoration: none;
         padding: 15px 40px;
         font-weight: 500;
@@ -234,7 +234,7 @@
         }
 
         .informationsProduct{
-            font-size: 18px;
+            font-size: 16px;
             padding: 50px 0px 50px 50px;
         }
     }
@@ -242,7 +242,7 @@
     @media screen and (max-width: 900px)  {
 
         h4{
-            font-size: 40px;
+            font-size: 30px;
         }
 
         .contentContainer{
@@ -251,7 +251,7 @@
         }
 
         .informationsProduct{
-            font-size: 18px;
+            font-size: 16px;
             padding: 50px 0px 50px 0px;
         }
 

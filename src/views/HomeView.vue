@@ -36,11 +36,44 @@
             }
         },
 
+        
+        created () {
+            window.addEventListener('scroll', this.handleScroll);
+        },
+        unmounted () {
+            window.removeEventListener('scroll', this.handleScroll);
+        },
+
+        methods: {
+            handleScroll (event: any) {
+
+                interface IScrolleffect {
+                    scrollElm : Element | null | any;
+                }
+
+                const hero: IScrolleffect = { scrollElm: document.querySelector('#headerHomepage')};
+                const scrollPosLimit: number = 600;
+
+                window.addEventListener("scroll", function() {
+                    
+                    const scroll = window.pageYOffset;
+                    const docHeight = document.body.scrollHeight;
+
+                    const rateOpacityHero = 1.1 - Math.round((scroll/scrollPosLimit) * 10) / 10;
+
+                    // hero
+                    if(scroll < scrollPosLimit) {
+                        hero.scrollElm.style.opacity = rateOpacityHero;
+                    }
+                });
+            },
+        },
+
         setup() {
             const images = [
                 {id: 1, url:'url(' + image6 + ')', description: 'description random'},
                 {id: 2, url:'url(' + image1 + ')', description: 'description random'},
-                {id: 6, url:'url(' + image5 + ')', description: 'description random'},
+                {id: 3, url:'url(' + image5 + ')', description: 'description random'},
                 
             ];
 
@@ -121,7 +154,10 @@
 
 <template>
 
-    <Header></Header>
+    <div style="background-color: var(--black);">
+        <Header></Header>
+    </div>
+   
     <Separation></Separation>
     
     <Presentation>
@@ -137,18 +173,96 @@
 
 </template>
 
-<style>
-
+<style scoped>
     /* Changement de la photo */
     .sectionShowMenu {
         background-image: 
-            linear-gradient(rgba(000, 000, 000, 0.6), rgba(000, 000, 000, 0.6)),
+            linear-gradient(rgba(000, 000, 000, 0.8), rgba(000, 000, 000, 0.8)),
             url("@/assets/img/IRMAR/IRMAR_3.jpg");
+        
     } 
+
+    .disabledBackground{
+        animation: change-color 0.5s forwards;
+    }
+
+    @keyframes change-color {
+        0%{
+            background-image: 
+                linear-gradient(rgba(000, 000, 000, 0.8), rgba(000, 000, 000, 0.8)),
+                url("@/assets/img/IRMAR/IRMAR_3.jpg");
+        }
+
+        10% {
+            background-image: 
+                linear-gradient(rgba(000, 000, 000, 0.78), rgba(000, 000, 000, 0.78)),
+                url("@/assets/img/IRMAR/IRMAR_3.jpg");
+        }
+
+        20% {
+            background-image: 
+                linear-gradient(rgba(000, 000, 000, 0.76), rgba(000, 000, 000, 0.76)),
+                url("@/assets/img/IRMAR/IRMAR_3.jpg");
+        }
+
+        30% {
+            background-image: 
+                linear-gradient(rgba(000, 000, 000, 0.74), rgba(000, 000, 000, 0.74)),
+                url("@/assets/img/IRMAR/IRMAR_3.jpg");
+        }
+
+        40% {
+            background-image: 
+                linear-gradient(rgba(000, 000, 000, 0.72), rgba(000, 000, 000, 0.72)),
+                url("@/assets/img/IRMAR/IRMAR_3.jpg");
+        }
+
+        50% {
+            background-image: 
+                linear-gradient(rgba(000, 000, 000, 0.70), rgba(000, 000, 000, 0.70)),
+                url("@/assets/img/IRMAR/IRMAR_3.jpg");
+        }
+
+        60% {
+            background-image: 
+                linear-gradient(rgba(000, 000, 000, 0.68), rgba(000, 000, 000, 0.68)),
+                url("@/assets/img/IRMAR/IRMAR_3.jpg");
+        }
+
+        70% {
+            background-image: 
+                linear-gradient(rgba(000, 000, 000, 0.66), rgba(000, 000, 000, 0.66)),
+                url("@/assets/img/IRMAR/IRMAR_3.jpg");
+        }
+
+        80% {
+            background-image: 
+                linear-gradient(rgba(000, 000, 000, 0.64), rgba(000, 000, 000, 0.64)),
+                url("@/assets/img/IRMAR/IRMAR_3.jpg");
+        }
+
+        90% {
+            background-image: 
+                linear-gradient(rgba(000, 000, 000, 0.62), rgba(000, 000, 000, 0.62)),
+                url("@/assets/img/IRMAR/IRMAR_3.jpg");
+        }
+
+        100% {
+            background-image: 
+                linear-gradient(rgba(000, 000, 000, 0.6), rgba(000, 000, 000, 0.6)),
+                url("@/assets/img/IRMAR/IRMAR_3.jpg");
+        }
+        
+    }
+</style>
+
+<style>
+
+    
 
     .sectionPresentation {
         background-image: 
-            linear-gradient(rgba(000, 000, 000, 0.6), rgba(000, 000, 000, 0.6)),
+            linear-gradient(rgba(000, 000, 000, 0.5), rgba(000, 000, 000, 0.5)),
             url("@/assets/img/IRMAR/presentation.jpg");
     } 
 

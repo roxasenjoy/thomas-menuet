@@ -69,7 +69,7 @@
             </div>
 
             <div class="enigme__right">
-                <p class="enigme__title">ÉNIGME</p>
+                <p class="enigme__title">ÉNIGMES</p>
                 <p class="enigme__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.</p>
                 <a href="/enigmes.zip" download class="enigme__btn">TELECHARGER LES ÉNIGMES</a>
             </div>
@@ -101,7 +101,7 @@
 
     .enigme__title{
         font-family: var(--nycd);
-        font-size: 54px;
+        font-size: 40px;
     }
 
     .enigme__image{
@@ -109,7 +109,7 @@
         height: 600px;
         background-position: center center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         margin-bottom: 25px;
     }
 
@@ -125,7 +125,7 @@
         background-color: var(--black);
         color: var(--white);
         padding: 100px 0;
-        font-size: 24px;
+        font-size: 20px;
         font-family: var(--ms-regular);
     }
 
@@ -161,7 +161,7 @@
         }
 
         .enigme__description{
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 
@@ -169,7 +169,7 @@
 
         .enigme__content{
             width: 90%;
-            flex-direction: column;
+            flex-direction: column-reverse;
         }
 
         .enigme__left{
@@ -181,7 +181,7 @@
         }
 
         .enigme__title{
-            font-size: 40px;
+            font-size: 30px;
             text-align: center;
         }
 
@@ -190,7 +190,7 @@
         }
 
         .enigme__btn{
-            font-size: 18px;
+            font-size: 16px;
             white-space: initial;
             display: block;
             text-align: center;

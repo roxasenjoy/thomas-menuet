@@ -84,7 +84,9 @@
                 <p class="command__title">COMMANDER</p>
                 <hr class="command__separation">
                 <p class="command__texte">Vous souhaitez commander un projet à Thomas MENUET ?</p>
-                <a class="command__btn" href="" >DÉTAILLEZ VOTRE PROJET</a>
+                <a class="command__btn" :href="' mailto:hello@hello.com \
+                            ?subject=Détaillez votre projet \
+                            &body= '">DÉTAILLEZ VOTRE PROJET</a>
             </div>
             
 
@@ -131,7 +133,7 @@
     }
 
     .command__title{
-        font-size: 54px;
+        font-size: 40px;
         font-family: var(--nycd);
     }
 
@@ -165,7 +167,7 @@
             height: 75vh;  
         } 
         .command__title{
-            font-size: 40px;
+            font-size: 30px;
         }
 
         .command__texte{

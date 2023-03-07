@@ -42,10 +42,7 @@
             ];
 
             const listElements = [
-                {id: 1, color: "var(--gold)", active: 1}, // Actif
-                {id: 2, color: "var(--white)", active: 0}, // Pas actif
-                {id: 3, color: "var(--grey)", active: 0},
-                {id: 4, color: "var(--grey)", active: -1}, // Indisponible
+
             ];
 
             const details = [
