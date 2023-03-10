@@ -6,7 +6,7 @@
 </script>
 
 <template>
-    <div class="blackSeparation"></div>
+    <!-- <div class="blackSeparation"></div> -->
 </template>
 
 <style>

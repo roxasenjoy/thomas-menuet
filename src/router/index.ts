@@ -7,6 +7,7 @@ import MarcheBlessesView from '../views/MarcheBlessesView.vue';
 import EstampieView from '../views/EstampieView.vue';
 import EnduranceView from '../views/EnduranceView.vue';
 import CommandViewVue from '@/views/CommandView.vue';
+import BiographieVue from '@/views/Biographie.vue';
 
 
 const router = createRouter({
@@ -49,6 +50,11 @@ const router = createRouter({
       path: '/commander',
       name: 'commander',
       component: CommandViewVue
+    },
+    {
+      path: '/biographie',
+      name: 'biographie',
+      component: BiographieVue
     }
   ]
 })

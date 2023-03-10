@@ -72,21 +72,21 @@
             <div class="line3"></div>
         </div>
         <ul class="nav-links">
-            <li><router-link :to="{ name: 'home'}">Accueil</router-link></li>
+            <li><router-link :to="{ name: 'home'}" @click=" displayMenu()">Accueil</router-link></li>
             <li class="deroulant">
                 <p class="projectsArchived">Projets archivés &#9660;</p>
                 
                 <ul class="menu">
-                    <li><router-link :to="{ name: 'home'}">IRMAR</router-link></li>
-                    <li><router-link :to="{ name: 'reverence'}">RÉVÉRENCE</router-link></li>
-                    <li><router-link :to="{ name: 'marche'}">MARCHE DES BLESSÉS DE GUERRE</router-link></li>
-                    <li><router-link :to="{ name: 'estampie'}">ESTAMPIE</router-link></li>
-                    <li><router-link :to="{ name: 'endurance'}">ENDURANCE</router-link></li>     
+                    <li><router-link :to="{ name: 'home'}" @click=" displayMenu()">IRMAR</router-link></li>
+                    <li><router-link :to="{ name: 'reverence'}" @click=" displayMenu()">RÉVÉRENCE</router-link></li>
+                    <li><router-link :to="{ name: 'marche'}" @click=" displayMenu()">MARCHE DES BLESSÉS DE GUERRE</router-link></li>
+                    <li><router-link :to="{ name: 'estampie'}" @click=" displayMenu()">ESTAMPIE</router-link></li>
+                    <li><router-link :to="{ name: 'endurance'}" @click=" displayMenu()">ENDURANCE</router-link></li>     
                 </ul>
             
             </li>
-            <li><a href="#">Biographie</a></li>
-            <li><router-link :to="{ name: 'commander'}" id="command">COMMANDER</router-link></li> <!-- A changer avec un template -->
+            <li><router-link :to="{ name: 'biographie'}" id="biographie" @click=" displayMenu()">Biographie</router-link></li> <!-- A changer avec un template -->
+            <li><router-link :to="{ name: 'commander'}" id="command" @click=" displayMenu()" >COMMANDER</router-link></li> <!-- A changer avec un template -->
             <li><a></a></li>
         </ul>
     </nav>

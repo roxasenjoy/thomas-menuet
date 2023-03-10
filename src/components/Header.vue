@@ -39,7 +39,7 @@
                 <div class="btn-container">
                     <div class="btn">
                         <Transition name="commandBtn"><router-link v-if="show" :to="{ name: 'commander'}" id="command">Commander</router-link></Transition>
-                        <Transition name="biographie"><h1 v-if="show">Thomas Menuet ?</h1></Transition>
+                        <Transition name="biographie"><router-link v-if="show" :to="{ name: 'biographie'}" id="nameThomas"><h1>Thomas Menuet ?</h1></router-link></Transition>
                     </div>
                 </div>
         </slot>
@@ -121,7 +121,7 @@
         align-items: center;  
     }
 
-    .btn-container .btn a{
+    .btn-container .btn #command{
         font-size: 24px;
         font-family: var(--nycd);
         text-decoration: none;
@@ -130,6 +130,16 @@
         margin-right: 50px;
         padding: 4px 30px;
         border: var(--white) solid 1px;
+        color: var(--white);
+    }
+
+    .btn-container .btn #nameThomas{
+        font-size: 24px;
+        font-family: var(--nycd);
+        text-decoration: none;
+        text-align: center;
+        margin-right: 50px;
+        padding: 4px 30px;
         color: var(--white);
     }
     
@@ -182,7 +192,8 @@
             flex-direction: column;  
         }
 
-        .btn-container .btn a,
+        .btn-container .btn #nameThomas,
+        .btn-container .btn #command,
         .btn-container h1,
         .name-container .name p,
         .name-container h1{
@@ -200,9 +211,14 @@
             top: 15%;
         }
 
-        .btn-container .btn a{
+        .btn-container .btn #nameThomas,
+        .btn-container .btn #command{
             margin-bottom: 10%;
             font-size: 18px;
+        }
+
+        .btn-container .btn #nameThomas{
+            margin-bottom: 0%;
         }
 
         .btn-container h1{

@@ -41,7 +41,7 @@
                 {id: 4, url:'url(' + image4 + ')', description: 'description random'}
             ];
 
-            const listElements = [
+            const listElements: any = [
 
             ];
 
