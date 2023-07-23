@@ -76,23 +76,27 @@
 
 <template>
 
-    <Header>
 
-        <template v-slot:content>
+    <div style="background-color: var(--black);">
 
-            <div class="command__content">
-                <p class="command__title">COMMANDER</p>
-                <hr class="command__separation">
-                <p class="command__texte">Vous souhaitez commander un projet à Thomas MENUET ?</p>
-                <a class="command__btn" :href="' mailto:hello@hello.com \
-                            ?subject=Détaillez votre projet \
-                            &body= '">DÉTAILLEZ VOTRE PROJET</a>
-            </div>
-            
+        <Header>
 
-        </template>
+            <template v-slot:content>
 
-    </Header>
+                <div class="command__content">
+                    <p class="command__title">COMMANDER</p>
+                    <hr class="command__separation">
+                    <p class="command__texte">Vous souhaitez commander un projet à Thomas MENUET ?</p>
+                    <a class="command__btn" :href="' mailto:hello@hello.com \
+                                ?subject=Détaillez votre projet \
+                                &body= '">DÉTAILLEZ VOTRE PROJET</a>
+                </div>
+                
+
+            </template>
+
+        </Header>
+    </div>
     <Product  
         :listElements="listElements" 
         :details="details" 

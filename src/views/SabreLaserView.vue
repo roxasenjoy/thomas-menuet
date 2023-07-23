@@ -74,7 +74,9 @@
 
 <template>
 
-    <Header></Header>
+    <div style="background-color: var(--black);">
+        <Header></Header>
+    </div>
     <Separation></Separation>
     <Presentation>
 

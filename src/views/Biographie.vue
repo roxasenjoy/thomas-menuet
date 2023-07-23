@@ -21,23 +21,25 @@
 
 <template>
 
-    <Header>
+    <div style="background-color: var(--black);">
+        <Header>
 
-        <template v-slot:content>
+            <template v-slot:content>
 
-            <div class="command__content">
-                <p class="command__title">BIOGRAPHIE</p>
-                <hr class="command__separation">
-                <p class="command__texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a class="command__btn" :href="' mailto:hello@hello.com \
-                            ?subject=Détaillez votre projet \
-                            &body= '">DÉTAILLEZ VOTRE PROJET</a>
-            </div>
-            
+                <div class="command__content">
+                    <p class="command__title">BIOGRAPHIE</p>
+                    <hr class="command__separation">
+                    <p class="command__texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a class="command__btn" :href="' mailto:hello@hello.com \
+                                ?subject=Détaillez votre projet \
+                                &body= '">DÉTAILLEZ VOTRE PROJET</a>
+                </div>
+                
 
-        </template>
+            </template>
 
-    </Header>
+        </Header>
+    </div>
 
     
     <section class="sectionImage separation transition">

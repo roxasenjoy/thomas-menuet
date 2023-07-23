@@ -19,6 +19,10 @@
             displayHeader(){
                 this.show = true;
             },
+
+           
+
+            
         }
     }
 </script>
@@ -31,7 +35,9 @@
 
                 <div class="name-container">
                     <div class="name">
-                        <Transition name="logo"><p  v-if="show">LOGO</p></Transition>
+                        <Transition name="logo">
+                            <img class="logo" v-if="show" alt="Logo Thomas Menuet" src="@/assets/img/logos/logo transparent.png"/>
+                        </Transition>
                         <Transition name="name"> <h1  v-if="show">Thomas Menuet <br> présente</h1></Transition>
                     </div>
                 </div>
@@ -52,6 +58,11 @@
 
 
     /* Logo */
+
+    .logo{
+        height: 125px;
+    }
+
     .logo-enter-active{
         transition: all 1s ease-out;
     }

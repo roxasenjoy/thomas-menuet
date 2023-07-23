@@ -16,6 +16,8 @@
     import image6 from '@/assets/img/IRMAR/4.jpg';
 
     import enigme1 from '@/assets/img/enigmes/1.jpg';
+    import enigme2 from '@/assets/img/enigmes/2.jpg';
+    import enigme3 from '@/assets/img/enigmes/3.jpg';
 
    
 
@@ -57,9 +59,8 @@
                 window.addEventListener("scroll", function() {
                     
                     const scroll = window.pageYOffset;
-                    const docHeight = document.body.scrollHeight;
 
-                    const rateOpacityHero = 1.1 - Math.round((scroll/scrollPosLimit) * 10) / 10;
+                    const rateOpacityHero = 1 - Math.round((scroll/scrollPosLimit) * 10) / 10;
 
                     // hero
                     if(scroll < scrollPosLimit) {
@@ -134,21 +135,28 @@
             ];
 
             const listImgEnigmes = [
-                {url:'url(' + enigme1 + ')'}
+                {url:'url(' + enigme1 + ')'},
+                {url:'url(' + enigme2 + ')'},
+                {url:'url(' + enigme3 + ')'}
             ];
 
             const listElementsEnigme = [
                 {id: 1, color: "var(--gold)", active: 1}, // Actif
-                {id: 2, color: "var(--white)", active: -1}, // Pas actif
-                {id: 3, color: "var(--grey)", active: -1},
+                {id: 2, color: "var(--white)", active: 0}, // Pas actif
+                {id: 3, color: "var(--grey)", active: 0},
                 {id: 4, color: "var(--grey)", active: -1}, // Indisponible
+                {id: 5, color: "var(--grey)", active: -1}, // Indisponible
+                {id: 6, color: "var(--grey)", active: -1}, // Indisponible
+                {id: 7, color: "var(--grey)", active: -1}, // Indisponible
+                {id: 8, color: "var(--grey)", active: -1}, // Indisponible
+                {id: 9, color: "var(--grey)", active: -1}, // Indisponible
+                {id: 10, color: "var(--grey)", active: -1}, // Indisponible
+
             ];
 
             return { images, listElements, details, listAudios, listImgEnigmes, listElementsEnigme};
         },
     });
-
-       
 
 </script>
 
@@ -161,13 +169,17 @@
     <Separation></Separation>
     
     <Presentation>
-        <template v-slot:title>RÉSIDENCE DE L'IRMAR</template>
+        <template v-slot:title>Résidence à l’institut de recherche mathématique de Rennes (IRMAR)</template>
         <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.</template>
     </Presentation>
 
     <CarouselImage :images="images" :nbImages=nbImages></CarouselImage>
-    <Product  :listElements="listElements" :details="details"></Product>
-    <Audio :listAudios="listAudios"></Audio>
+    <Product  :listElements="listElements" :details="details">
+        <template v-slot:title>Les 8 oeuvres musicales en partition</template>
+    </Product>
+    <Audio :listAudios="listAudios">
+        <template v-slot:title>Les 8 oeuvres musicales à l’écoute</template>
+    </Audio>
     <Enigme :listImgEnigmes="listImgEnigmes" :listElementsEnigme="listElementsEnigme"></Enigme>
 
 
@@ -258,13 +270,10 @@
 
 <style>
 
-    
-
     .sectionPresentation {
         background-image: 
             linear-gradient(rgba(000, 000, 000, 0.5), rgba(000, 000, 000, 0.5)),
             url("@/assets/img/IRMAR/presentation.jpg");
     } 
-
 
 </style>

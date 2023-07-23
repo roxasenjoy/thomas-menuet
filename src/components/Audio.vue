@@ -11,7 +11,7 @@
 
     <section class="audio__container">
 
-        <p class="audio__section_title">ÉCOUTER DÈS MAINTENANT</p>
+        <p class="audio__section_title"><slot name="title">ÉCOUTER DÈS MAINTENANT</slot></p>
 
         <div class="audio__list">
             <div class="audio__item" v-for="(item, index) in listAudios[0]">

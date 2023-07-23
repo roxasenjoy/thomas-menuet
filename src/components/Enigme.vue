@@ -69,7 +69,7 @@
             </div>
 
             <div class="enigme__right">
-                <p class="enigme__title">ÉNIGMES</p>
+                <p class="enigme__title">Les dix énigmes mathématico-musicales</p>
                 <p class="enigme__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.</p>
                 <a href="/enigmes.zip" download class="enigme__btn">TELECHARGER LES ÉNIGMES</a>
             </div>
@@ -105,12 +105,14 @@
     }
 
     .enigme__image{
-        width: 600px;
+        width: 424px;
+        margin: auto;
         height: 600px;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
         margin-bottom: 25px;
+        box-shadow: 0px 0px 10px var(--gold);
     }
 
     .enigme__content{
@@ -202,10 +204,5 @@
         }
 
     }
-
-</style>
-
-<style>
-
 
 </style>

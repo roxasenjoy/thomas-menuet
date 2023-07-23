@@ -68,21 +68,21 @@
         },
     });
 
-       
-
 </script>
 
 <template>
 
-    <Header></Header>
+    <div style="background-color: var(--black);">
+        <Header></Header>
+    </div>
     <Separation></Separation>
-    <Presentation>
 
+    <Presentation>
         <template v-slot:title>RÉVÉRENCE</template>
         <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.</template>
         <template v-slot:downloadPress>.</template>
-
     </Presentation>
+
     <CarouselImage :images="images" :nbImages=nbImages></CarouselImage>
     <Product  :listElements="listElements" :details="details">
     

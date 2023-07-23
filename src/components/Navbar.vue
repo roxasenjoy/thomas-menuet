@@ -80,8 +80,9 @@
                     <li><router-link :to="{ name: 'home'}" @click=" displayMenu()">IRMAR</router-link></li>
                     <li><router-link :to="{ name: 'reverence'}" @click=" displayMenu()">RÉVÉRENCE</router-link></li>
                     <li><router-link :to="{ name: 'marche'}" @click=" displayMenu()">MARCHE DES BLESSÉS DE GUERRE</router-link></li>
+                    <li><router-link :to="{ name: 'endurance'}" @click=" displayMenu()">ENDURANCE</router-link></li>  
                     <li><router-link :to="{ name: 'estampie'}" @click=" displayMenu()">ESTAMPIE</router-link></li>
-                    <li><router-link :to="{ name: 'endurance'}" @click=" displayMenu()">ENDURANCE</router-link></li>     
+                    <li><router-link :to="{ name: 'sabreLaser'}" @click=" displayMenu()">Sabre Laser LDLC</router-link></li>   
                 </ul>
             
             </li>
