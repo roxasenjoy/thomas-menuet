@@ -200,7 +200,11 @@
 
         .enigme__image{
             width: 100%;
-            height: 400px;
+            height: 475px;
+        }
+
+        .contentItems{
+            flex-wrap: wrap;
         }
 
     }

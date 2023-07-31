@@ -29,17 +29,22 @@
 
 <template>
     <section class="sectionShowMenu" id="headerHomepage">
-
         <slot name="content">
             <Citations @show="displayHeader"></Citations>
 
                 <div class="name-container">
                     <div class="name">
                         <Transition name="logo">
-                            <img class="logo" v-if="show" alt="Logo Thomas Menuet" src="@/assets/img/logos/logo transparent.png"/>
+                            <img class="logo" v-if="show" alt="Logo Thomas Menuet" src="@/assets/img/logos/logoTransparent.png"/>
                         </Transition>
                         <Transition name="name"> <h1  v-if="show">Thomas Menuet <br> présente</h1></Transition>
                     </div>
+                </div>
+
+                <div class="containerVideo">
+                    <Transition name="video">
+                        <slot name="video" v-if="show"></slot>
+                    </Transition>
                 </div>
 
                 <div class="btn-container">
@@ -103,6 +108,30 @@
     .biographie-enter-from,
     .biographie-leave-to {
         transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    .containerVideo{
+        position: absolute;
+        top: 51%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+    }
+
+    .containerVideo iframe{
+        width: 100%;
+        height: 500px;
+        border: var(--white) solid 1px;
+    }
+
+    .video-enter-active{
+        transition: all 3.5s ease-out;
+    }
+
+    .video-enter-from,
+    .video-leave-to {
+        transform: translateY(-50px);
         opacity: 0;
     }
 
@@ -197,6 +226,9 @@
 
     @media screen and (max-width: 900px)  {
 
+        .logo{
+            height: 50px;
+        }
 
         .btn-container .btn,
         .name-container .name{
@@ -215,7 +247,7 @@
 
         /* Bouton en bas */
         .btn-container{
-            top: 80%;
+            top: 85%;
         }
 
         .name-container{
@@ -224,7 +256,7 @@
 
         .btn-container .btn #nameThomas,
         .btn-container .btn #command{
-            margin-bottom: 10%;
+            margin-bottom: 25px;
             font-size: 18px;
         }
 
@@ -235,7 +267,24 @@
         .btn-container h1{
             font-size: 18px;
         }
+
+        .containerVideo{
+            top: 50%;
+            width: 75%;
+        }
+
+        .containerVideo iframe{
+            height: 300px;
+            border: var(--white) solid 1px;
+        }
         
+    }
+
+    @media screen and (max-width: 500px)  {
+        .containerVideo{
+            width: 85%;
+        }
+
     }
 
 
