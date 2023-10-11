@@ -45,8 +45,10 @@
     <section class="sectionImage separation transition">
         <div class="text rightText">
             <div class="text">
-                <h2>Lorem ipsum dolor</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id dui libero. Donec congue magna vitae libero imperdiet consectetur. Fusce at porttitor est. Pellentesque condimentum pretium risus, ut accumsan augue feugiat nec. Nulla luctus sodales dolor eu efficitur. Ut porttitor erat et est efficitur dapibus. Maecenas rutrum cursus condimentum. Proin elit justo, iaculis vel odio ac, mattis euismod quam. Proin congue, neque fringilla mattis facilisis, lorem nisi dapibus metus, id egestas risus mauris ac justo. Aenean maximus libero eget lectus scelerisque, ac aliquet augue placerat. </p>                
+                <!-- <h2>Lorem ipsum dolor</h2> -->
+                <p>Thomas Menuet est un compositeur français. Il est depuis toujours sensible à l’idée que l’art, bien plus qu’un divertissement, engage la responsabilité de l’artiste. Ainsi, apprécie-t-il particulièrement les projets exigeants qui l’amènent à réaliser des œuvres et des résidences au plus proche des populations, et au sein d’endroits atypiques.
+        	Le compositeur porte une attention particulière à ce que son travail soit compréhensible et intelligible par tous. Il a à cœur d’y intégrer les diverses facettes de la société, les particularités des métiers, ainsi que celles des gens qui la composent. Très attaché à l’idée de précision et de justesse dans son travail, il prend un soin particulier dans tous ces projets à prendre le temps d’écouter les gens, de les comprendre, d’enquêter et cartographier les lieux avant de créer avec la matière rencontrée.
+        	Ces rencontres et ces endroits nourrissent le compositeur car il lui donne à voir la richesse du monde et de la société, telle qu’ils sont. Par conséquent, cela amène Thomas Menuet à témoigner d’une grande diversité de projet : avec LDLC, société d’informatique lyonnaise, il réalise les sons du sabre laser WAAN. Il a également composé pour l’Armée de Terre française, la Marche des blessés de guerre de l’armée de Terre, pour trois orchestres (harmonie, brassband et fanfare) - Œuvre qui sert maintenant d’hommage national aux blessés de l’armée de Terre. Avec Estampie, œuvre pour sextuor, il met en avant son travail avec la danse. Puis avec Refuge, œuvre pour grand ensemble, il témoigne de son intérêt pour le théâtre, car dans cette œuvre, tel un écrivain funambule, il tente d’expliquer la guerre aux enfants. </p>                
             </div>
         </div>
 
@@ -64,8 +66,10 @@
 
         <div class="text leftText">
             <div class="text">
-                <h2>Lorem ipsum dolor</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id dui libero. Donec congue magna vitae libero imperdiet consectetur. Fusce at porttitor est. Pellentesque condimentum pretium risus, ut accumsan augue feugiat nec. Nulla luctus sodales dolor eu efficitur. Ut porttitor erat et est efficitur dapibus. Maecenas rutrum cursus condimentum. Proin elit justo, iaculis vel odio ac, mattis euismod quam. Proin congue, neque fringilla mattis facilisis, lorem nisi dapibus metus, id egestas risus mauris ac justo. Aenean maximus libero eget lectus scelerisque, ac aliquet augue placerat. </p>                
+                <!-- <h2>Lorem ipsum dolor</h2> -->
+                <p>Thomas Menuet a également réalisé plusieurs résidences dans des lieux atypiques. Parmi elles, il a passé un an à l’USP (unité de soin palliatif) de la Tauvrais (CHU) à Rennes, dans le but de réaliser des portraits de patients. Il passe maintenant deux ans à l’IRMAR (Institut de recherche mathématique de Rennes) où il réalisera huit œuvres en lien avec les recherches mathématiques nationales et internationales, ainsi que dix énigmes faisant s’imbriquer mathématiques et musiques.
+        	La prise de risque est un aspect important du travail de Thomas Menuet. Car dans chacune de ces aventures musicales et sociales, le compositeur a la possibilité de remettre son expérience et son métier toujours en question. Il écoute sans juger ce qu’on lui dit, note, enregistre, écrit et rédige de manière à accéder sans présupposés ni tabou, au cœur de chaque individu, de chaque parcelle de la société. Puis il crée ses œuvres, avec la plus grande justesse, de manière à proposer à ces commanditaires ce qui se fait de mieux.
+        	Thomas Menuet est également professeur de composition chaque été à l’académie internationale d’été Musicalta, en Alsace. Toutes ces œuvres et résidences sont disponibles sur le site du compositeur. </p>                
                 <div id="gouterBtn">
                     <a href="" class="btnContact transition">Lorem ipsum</a>
                 </div>

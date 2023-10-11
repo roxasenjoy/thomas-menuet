@@ -7,16 +7,43 @@
     import Audio from '@/components/Audio.vue';
     import Enigme from '@/components/Enigme.vue';
 
-    import image1 from '@/assets/img/marche/1.jpg';
-    import image2 from '@/assets/img/marche/2.jpg';
-    import image3 from '@/assets/img/marche/3.jpg';
-    import image4 from '@/assets/img/marche/4.jpg';
-    import image5 from '@/assets/img/marche/5.jpg';
-    import image6 from '@/assets/img/marche/6.jpg';
-    import image7 from '@/assets/img/marche/7.jpg';
-    import image8 from '@/assets/img/marche/8.jpg';
-    import image9 from '@/assets/img/marche/9.jpg';
-    import image10 from '@/assets/img/marche/10.jpg';
+    import image1 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_1.jpg';
+    import image2 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_2.jpg';
+    import image3 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_3.jpg';
+    import image4 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_4.jpg';
+    import image5 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_5.jpg';
+    import image6 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_6.jpg';
+    import image7 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_7.jpg';
+    import image8 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_8.jpg';
+    import image9 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_9.jpg';
+    import image10 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_10.jpg';
+    import image11 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_11.jpg';
+    import image12 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_12.jpg';
+    import image13 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_13.jpg';
+    import image14 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_14.jpg';
+    import image15 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_15.jpg';
+    import image16 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_16.jpg';
+    import image17 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_17.jpg';
+    import image18 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_18.jpg';
+    import image19 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_19.jpg';
+    import image20 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_20.jpg';
+    import image21 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_21.jpg';
+    import image22 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_22.jpg';
+    import image23 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_23.jpg';
+    import image24 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_24.jpg';
+    import image25 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_25.jpg';
+    import image26 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_26.jpg';
+    import image27 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_27.jpg';
+    import image28 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_28.jpg';
+    import image29 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_29.jpg';
+    import image30 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_30.jpg';
+    import image31 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_31.jpg';
+    import image32 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_32.jpg';
+    import image33 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_Rennes_1.jpg';
+    import image34 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_Rennes_2.jpg';
+    import image35 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_Rennes_3.jpg';
+    import image36 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_Rennes_4.jpg';
+    import image37 from '@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_Rennes_5.jpg';
 
     import Product from '@/components/Product.vue';
 
@@ -38,18 +65,22 @@
         },
 
         setup() {
-            const images = [
-                {id: 1, url:'url(' + image10 + ')', description: 'description random'},
-                {id: 2, url:'url(' + image1 + ')', description: 'description random'},
-                {id: 3, url:'url(' + image2 + ')', description: 'description random'},
-                {id: 4, url:'url(' + image3 + ')', description: 'description random'},
-                {id: 5, url:'url(' + image4 + ')', description: 'description random'},
-                {id: 6, url:'url(' + image5 + ')', description: 'description random'},
-                {id: 7, url:'url(' + image6 + ')', description: 'description random'},
-                {id: 8, url:'url(' + image7 + ')', description: 'description random'},
-                {id: 9, url:'url(' + image8 + ')', description: 'description random'},
-                {id: 10, url:'url(' + image9 + ')', description: 'description random'}
+
+            let images = [];
+            const marcheDesBlessesImages = [
+                image1, image2, image3, image4, image5, image6, image7, image8, image9, image10,
+                image11, image12, image13, image14, image15, image16, image17, image18, image19, image20,
+                image21, image22, image23, image24, image25, image26, image27, image28, image29, image30,
+                image31, image32, image33, image34, image35, image36, image37,
             ];
+
+            for (let i = 1; i <= 26; i++) {
+                images.push({
+                    id: i,
+                    url: `url(${marcheDesBlessesImages[i-1]})`, // i-1 car les indices de tableau commencent à 0
+                    description: 'description random'
+                });
+            }
 
             const listElements: any = [];
 
@@ -98,7 +129,7 @@
 
     <div style="background-color: var(--black);">
         <Header>
-            <template v-slot:video><iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"  frameborder="0" showinfo="0" controls="0" loop="0"></iframe></template>
+            <template v-slot:video><iframe width="420" height="315" src="https://www.youtube.com/watch?v=sgZvdOusdVQ"  frameborder="0" showinfo="0" controls="0" loop="0"></iframe></template>
         </Header>
     </div>
     <Separation></Separation>
@@ -121,13 +152,15 @@
     .sectionShowMenu {
         background-image: 
             linear-gradient(rgba(000, 000, 000, 0.6), rgba(000, 000, 000, 0.6)),
-            url("@/assets/img/marche/9.jpg");
+            url("@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_21.jpg");
     } 
 
     .sectionPresentation {
         background-image: 
             linear-gradient(rgba(000, 000, 000, 0.6), rgba(000, 000, 000, 0.6)),
-            url("@/assets/img/marche/5.jpg");
+            url("@/assets/img/marche-des-blesses-de-guerre/Marche_des_blessés_de_l_armée_de_Terre_création_9.jpg");
+
+        background-position-y: inherit;
     } 
 
 

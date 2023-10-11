@@ -10,7 +10,7 @@
 
     import image1 from '@/assets/img/IRMAR/IRMAR_1.jpg';
     import image2 from '@/assets/img/IRMAR/IRMAR_2.jpg';
-    import image3 from '@/assets/img/IRMAR/IRMAR_3.jpg';
+    import image3 from '@/assets/img/IRMAR/IRMAR_4.jpg';
     import image4 from '@/assets/img/IRMAR/presentation.jpg';
     import image5 from '@/assets/img/IRMAR/9.jpeg';
     import image6 from '@/assets/img/IRMAR/4.jpg';
@@ -18,6 +18,10 @@
     import enigme1 from '@/assets/img/enigmes/1.jpg';
     import enigme2 from '@/assets/img/enigmes/2.jpg';
     import enigme3 from '@/assets/img/enigmes/3.jpg';
+
+    import mathematician1 from '@/assets/img/enigmes/1.jpg';
+    import mathematician2 from '@/assets/img/enigmes/2.jpg';
+    import mathematician3 from '@/assets/img/enigmes/3.jpg';
 
    
 
@@ -54,7 +58,7 @@
                 }
 
                 const hero: IScrolleffect = { scrollElm: document.querySelector('#headerHomepage')};
-                const scrollPosLimit: number = 600;
+                const scrollPosLimit: number = 650;
 
                 window.addEventListener("scroll", function() {
                     
@@ -75,6 +79,7 @@
                 {id: 1, url:'url(' + image6 + ')', description: 'description random'},
                 {id: 2, url:'url(' + image1 + ')', description: 'description random'},
                 {id: 3, url:'url(' + image5 + ')', description: 'description random'},
+                {id: 4, url:'url(' + image3 + ')', description: 'description random'},
                 
             ];
 
@@ -135,9 +140,9 @@
             ];
 
             const listImgEnigmes = [
-                {url:'url(' + enigme1 + ')'},
-                {url:'url(' + enigme2 + ')'},
-                {url:'url(' + enigme3 + ')'}
+                {url:'url(' + enigme1 + ')', mathematician: 'url(' + mathematician1 + ')'},
+                {url:'url(' + enigme2 + ')', mathematician: 'url(' + mathematician2 + ')'},
+                {url:'url(' + enigme3 + ')', mathematician: 'url(' + mathematician3 + ')'}
             ];
 
             const listElementsEnigme = [
@@ -164,7 +169,7 @@
 
     <div style="background-color: var(--black);">
         <Header>
-            <template v-slot:video><iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"  frameborder="0" showinfo="0" controls="0" loop="0"></iframe></template>
+            <template v-slot:video><iframe width="420" height="315" src="https://www.youtube.com/watch?v=GIX9lmb1x1k"  frameborder="0" showinfo="0" controls="0" loop="0"></iframe></template>
         </Header>
     </div>
    
@@ -172,7 +177,7 @@
     
     <Presentation>
         <template v-slot:title>Résidence à l’institut de recherche mathématique de Rennes (IRMAR)</template>
-        <template v-slot:description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.</template>
+        <template v-slot:description>Durant deux années (de 2022-2024), je me rends une fois par semaine à l’IRMAR dans le but d’échanger avec des chercheurs et chercheuses en mathématique. Le but est de comprendre ce qu’est la recherche, à quoi elle nous sert dans l’établissement de la société dans laquelle nous vivons. Quelles sont les forces des êtres qui la font, quels sont leurs maux, leurs rêves et leurs passions ?</template>
     </Presentation>
 
     <CarouselImage :images="images" :nbImages=nbImages></CarouselImage>

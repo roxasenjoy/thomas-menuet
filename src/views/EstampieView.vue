@@ -8,11 +8,32 @@
     import Audio from '@/components/Audio.vue';
     import Enigme from '@/components/Enigme.vue';
 
-    import image1 from '@/assets/img/refuge/1.jpg';
-    import image2 from '@/assets/img/refuge/2.jpg';
-    import image3 from '@/assets/img/refuge/3.jpg';
-    import image4 from '@/assets/img/refuge/4.jpg';
-    import image5 from '@/assets/img/refuge/5.jpg';
+    import image1 from '@/assets/img/estampie/Estampie_1.jpg';
+    import image2 from '@/assets/img/estampie/Estampie_2.jpg';
+    import image3 from '@/assets/img/estampie/Estampie_3.jpg';
+    import image4 from '@/assets/img/estampie/Estampie_4.jpg';
+    import image5 from '@/assets/img/estampie/Estampie_5.jpg';
+    import image6 from '@/assets/img/estampie/Estampie_6.jpg';
+    import image7 from '@/assets/img/estampie/Estampie_7.jpg';
+    import image8 from '@/assets/img/estampie/Estampie_8.jpg';
+    import image9 from '@/assets/img/estampie/Estampie_9.jpg';
+    import image10 from '@/assets/img/estampie/Estampie_10.jpg';
+    import image11 from '@/assets/img/estampie/Estampie_11.jpg';
+    import image12 from '@/assets/img/estampie/Estampie_12.jpg';
+    import image13 from '@/assets/img/estampie/Estampie_13.jpg';
+    import image14 from '@/assets/img/estampie/Estampie_14.jpg';
+    import image15 from '@/assets/img/estampie/Estampie_15.jpg';
+    import image16 from '@/assets/img/estampie/Estampie_16.jpg';
+    import image17 from '@/assets/img/estampie/Estampie_17.jpg';
+    import image18 from '@/assets/img/estampie/Estampie_18.jpg';
+    import image19 from '@/assets/img/estampie/Estampie_19.jpg';
+    import image20 from '@/assets/img/estampie/Estampie_20.jpg';
+    import image21 from '@/assets/img/estampie/Estampie_21.jpg';
+    import image22 from '@/assets/img/estampie/Estampie_22.jpg';
+    import image23 from '@/assets/img/estampie/Estampie_23.jpg';
+    import image24 from '@/assets/img/estampie/Estampie_24.jpg';
+    import image25 from '@/assets/img/estampie/Estampie_25.jpg';
+    import image26 from '@/assets/img/estampie/Estampie_26.jpg';
 
    
 
@@ -34,12 +55,17 @@
         },
 
         setup() {
-            const images = [
-                {id: 1, url:'url(' + image1 + ')', description: 'description random'},
-                {id: 2, url:'url(' + image2 + ')', description: 'description random'},
-                {id: 3, url:'url(' + image3 + ')', description: 'description random'},
-                {id: 4, url:'url(' + image4 + ')', description: 'description random'}
-            ];
+
+            let images = [];
+            const estampieImages = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22, image23, image24, image25, image26];
+
+            for (let i = 1; i <= 26; i++) {
+                images.push({
+                    id: i,
+                    url: `url(${estampieImages[i-1]})`, // i-1 car les indices de tableau commencent à 0
+                    description: 'description random'
+                });
+            }
 
             const listElements: any = [
 
@@ -102,7 +128,7 @@
 
     <div style="background-color: var(--black);">
         <Header>
-            <template v-slot:video><iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"  frameborder="0" showinfo="0" controls="0" loop="0"></iframe></template>
+            <template v-slot:video><iframe width="420" height="315" src="https://www.youtube.com/watch?v=bTA24Kx784s"  frameborder="0" showinfo="0" controls="0" loop="0"></iframe></template>
         </Header>
     </div>
     <Separation></Separation>

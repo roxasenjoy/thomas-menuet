@@ -70,8 +70,13 @@
 
             <div class="enigme__right">
                 <p class="enigme__title">Les dix énigmes mathématico-musicales</p>
-                <p class="enigme__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis suscipit ornare. Morbi sed urna porttitor, bibendum est sit amet, commodo nulla. Nullam interdum sed nunc ac sollicitudin. Vivamus dictum ante vitae fringilla pellentesque. Ut sollicitudin, diam ut rhoncus venenatis, nibh enim aliquet odio, sed volutpat erat turpis sit amet eros.</p>
+                <p class="enigme__description">Les énigmes seront mises à disposition régulièrement et gratuitement au fur et à mesure de leur créations. En version gratuite, elles sont accompagnées de deux phrases vous permettant la recherche. Elles sont également accompagnées des structures ayant financé cette résidence.
+                                                Un livre contenant toutes les énigmes, avec une brève description pour chacune, sera disponible à partir de septembre 2024. Un cd sera joint également au livre, vous permettant d’écouter les parties musique de chaque énigme.
+                                                Puis un second livre sortira à sa suite, de réponses cette fois-ci. Ce dernier sera accompagné de toutes les mathématiques présentent, précisément décrites. Vous aurez également les extraits musicaux des énigmes ainsi que les divers compositeurs auxquels elles se rattachent.
+                </p>
                 <a href="/enigmes.zip" download class="enigme__btn">TELECHARGER LES ÉNIGMES</a>
+
+                <!-- <div class="enigme__mathematician" :style="{ backgroundImage: detailsElements.url }"></div> -->
             </div>
         </div>
         
@@ -83,7 +88,7 @@
 <style scoped>
 
     .enigme__right{
-        padding: 50px;
+        padding: 25px 75px;
     }
 
     .enigme__btn{
@@ -92,6 +97,7 @@
         text-decoration: none;
         color: var(--white);
         white-space: nowrap;
+        margin-bottom: 25px;
     }
 
     .enigme__description{
@@ -115,12 +121,22 @@
         box-shadow: 0px 0px 10px var(--gold);
     }
 
+    .enigme__mathematician{
+        background-color: white !important;
+        width: 50%;
+        height: 200px;
+        margin-top: 50px;
+        box-shadow: 0px 0px 10px var(--gold);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
     .enigme__content{
-        width: 75%;
+        width: 65%;
         margin: auto;
         display: flex;
         justify-content: center;
-        align-items: center;
     }
 
     .enigme__container{
@@ -136,6 +152,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .selectionPoint{
@@ -199,8 +216,17 @@
         }
 
         .enigme__image{
-            width: 100%;
-            height: 475px;
+            width: 300px;
+            height: 425px;
+        }
+
+        .enigme__mathematician{
+            width: 300px;
+            margin: auto;
+            box-shadow: 0px 0px 10px var(--gold);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
         }
 
         .contentItems{

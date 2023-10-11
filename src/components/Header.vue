@@ -91,7 +91,7 @@
 
     /* commandBtn */
     .commandBtn-enter-active{
-        transition: all 2s ease-out;
+        transition: all 5s ease-out;
     }
 
     .commandBtn-enter-from,
@@ -102,7 +102,7 @@
 
     /* biographie */
     .biographie-enter-active{
-        transition: all 3s ease-out;
+        transition: all 6s ease-out;
     }
 
     .biographie-enter-from,
@@ -122,11 +122,11 @@
     .containerVideo iframe{
         width: 100%;
         height: 500px;
-        border: var(--white) solid 1px;
+        border: var(--gold) solid 1px;
     }
 
     .video-enter-active{
-        transition: all 3.5s ease-out;
+        transition: all 5s ease-out;
     }
 
     .video-enter-from,

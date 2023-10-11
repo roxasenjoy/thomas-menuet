@@ -8,11 +8,8 @@
     import Audio from '@/components/Audio.vue';
     import Enigme from '@/components/Enigme.vue';
 
-    import image1 from '@/assets/img/reverence/1.jpg';
-    import image2 from '@/assets/img/reverence/2.jpg';
-    import image3 from '@/assets/img/reverence/3.jpg';
-    import image4 from '@/assets/img/reverence/4.jpg';
-    import image5 from '@/assets/img/reverence/5.jpg';
+    import image1 from '@/assets/img/sabre-laser/1.png';
+    import image2 from '@/assets/img/sabre-laser/2.jpg';
 
 
     export default({
@@ -36,9 +33,6 @@
             const images = [
                 {id: 1, url:'url(' + image1 + ')', description: 'description random'},
                 {id: 2, url:'url(' + image2 + ')', description: 'description random'},
-                {id: 3, url:'url(' + image3 + ')', description: 'description random'},
-                {id: 4, url:'url(' + image4 + ')', description: 'description random'},
-                {id: 5, url:'url(' + image5 + ')', description: 'description random'}
             ];
 
             const listElements: never[] = [];
@@ -68,15 +62,13 @@
         },
     });
 
-       
-
 </script>
 
 <template>
 
     <div style="background-color: var(--black);">
         <Header>
-            <template v-slot:video><iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"  frameborder="0" showinfo="0" controls="0" loop="0"></iframe></template>
+            <template v-slot:video><iframe width="420" height="315" src="https://www.youtube.com/watch?v=A92QFzIJ4bU"  frameborder="0" showinfo="0" controls="0" loop="0"></iframe></template>
         </Header>
     </div>
     <Separation></Separation>
@@ -104,13 +96,13 @@
     .sectionShowMenu {
         background-image: 
             linear-gradient(rgba(000, 000, 000, 0.6), rgba(000, 000, 000, 0.6)),
-            url("@/assets/img/reverence/3.jpg");
+            url("@/assets/img/sabre-laser/1.png");
     } 
 
     .sectionPresentation {
         background-image: 
             linear-gradient(rgba(000, 000, 000, 0.6), rgba(000, 000, 000, 0.6)),
-            url("@/assets/img/reverence/2.jpg");
+            url("@/assets/img/sabre-laser/2.jpg");
     } 
 
 
